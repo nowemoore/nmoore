@@ -1,0 +1,115 @@
+.academic-title {
+    font-size: 4vw;
+    margin-bottom: 2vh;
+    font-weight: bold;
+    color: #fae9de;
+}
+
+.academic-description {
+    font-size: 1.5vw;
+    margin-bottom: 4vh;
+    line-height: 1.6;
+    color: #fae9de;
+}
+
+.papers-list {
+    border-top: 1px solid #fae9de;
+    padding-top: 2vh;
+    padding-bottom: 2vh; /* Add some padding to the bottom of the papers list */
+    margin: 0 auto; /* Center the list horizontally */
+}
+
+.paper-item {
+    margin-bottom: 2vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Set background to black with 0.6 opacity */
+    padding: 2vw;
+    border-radius: 5px;
+}
+
+.paper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8vw;
+    cursor: pointer;
+    outline: none;
+    margin-right: 1vw;
+    transform: rotate(0deg) scaleY(0.5); /* Initial state: flattened character */
+    display: inline-block;
+    line-height: 1; /* Ensure no extra space around the character */
+    transition: transform 0.5s ease-out; /* Smooth rotation and scaling */
+}
+
+.paper-item.expanded .toggle-button {
+    transform: rotate(180deg) scaleY(0.5); /* Pointing upward and flattened when expanded */
+}
+
+.paper-title {
+    font-size: 1.8vw;
+    margin: 0;
+    text-align: left;
+    flex: 1; /* Ensure the title takes up available space */
+    padding-right: 5vw;
+}
+
+.paper-buttons {
+    display: flex;
+    gap: 1vw;
+}
+
+.paper-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.2vw;
+}
+
+.paper-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Style for Read Translation button */
+.paper-button-translation {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent */
+    color: #000000;
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 
+}
+
+.paper-description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.paper-item.expanded .paper-description {
+    max-height: 500px; /* Adjust based on your content */
+    opacity: 1;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, padding 0.5s ease-in;
+}
+
+
+
+
+
+
+

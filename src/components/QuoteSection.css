@@ -1,0 +1,99 @@
+.quote-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30vh; /* Adjusted to fit within the background image */
+    width: 100%;
+    color: #fae9de;
+    opacity: 0.9;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding doesn’t overflow */
+}
+
+.quote-background {
+    position: relative;
+    z-index: 2;
+    max-width: 80%; /* Ensures the content doesn't stretch too wide */
+    margin: 0 auto;
+}
+
+.quote-mark {
+    font-size: 60vw; /* Large size for the quotation marks */
+    position: absolute;
+    opacity: 0.15; /* Slightly more visible opacity */
+    font-family: 'Georgia', serif; /* Use a serif font for the quotation marks */
+    z-index: 1;
+    white-space: nowrap; /* Prevents the marks from wrapping */
+}
+
+.quote-mark.left-quote {
+    left: calc(25%); /* Keep a consistent distance from the left */
+    top: -50%; /* Center vertically */
+    transform: translate(-50%, -15vh); /* Move up slightly */
+}
+
+.quote-mark.right-quote {
+    right: calc(25%); /* Keep a consistent distance from the right */
+    top: -50%; /* Center vertically */
+    transform: translate(50%, -5vh) rotateY(180deg); /* Move down slightly and rotate */
+}
+
+.quote-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px; /* Add padding for better readability */
+}
+
+.quote-text {
+    font-size: 5vw; /* Adjust font size to fit better */
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2; /* Adjust line-height for better spacing */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For medium screens (tablets) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .quote-section {
+        height: 30vh; /* Adjust height for tablets */
+    }
+
+    .quote-mark {
+        font-size: 55vw; /* Adjust size for medium screens */
+    }
+
+    .quote-text {
+        font-size: 4.5vw; /* Adjust text size for medium screens */
+    }
+
+    .quote-mark.left-quote, .quote-mark.right-quote {
+        top: -40%; /* Adjust vertical position for tablets */
+        left: calc(20%); /* Adjust to keep distance consistent */
+        right: calc(20%); /* Adjust to keep distance consistent */
+    }
+}
+
+/* For small screens (phones) */
+@media (max-width: 767px) {
+    .quote-section {
+        width: 90%;
+        height: 40vh; /* Increase height for small screens */
+    }
+
+    .quote-mark {
+        font-size: 100vw; /* Larger font size for small screens */
+    }
+
+    .quote-text {
+        font-size: 7vw; /* Increase text size for readability on small screens */
+    }
+
+    .quote-mark.left-quote, .quote-mark.right-quote {
+        top: 0%; /* Adjust vertical position for small screens */
+        left: calc(15%); /* Ensure consistent spacing on small screens */
+        right: calc(15%); /* Ensure consistent spacing on small screens */
+    }
+}
+

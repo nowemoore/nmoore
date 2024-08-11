@@ -1,0 +1,65 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 0 0 10px 10px;
+  height: 60px;
+  margin: 0;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  height: 100%;
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.navbar-links li {
+  opacity: 0.6;
+  margin-left: 40px;
+  transition: transform 0.5s ease; /* Smooth transition for transform */
+}
+
+/* Apply hover effect directly to the list item to change opacity */
+.navbar-links li:hover, .navbar-links a:focus  {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+  opacity: 0.95; /* Increase opacity on hover */
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #fae9de;
+  font-weight: 700;
+  transition: color 0.5s ease; /* Smooth transition for color */
+}
+
+.navbar-underline {
+  width: 100%;
+  height: 2px;
+  background-color: #fae9de;
+  margin-top: 5px;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+  

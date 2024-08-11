@@ -1,0 +1,105 @@
+.thoughts-content {
+    text-align: center;
+    color: #fae9de;
+    padding: 20px;
+}
+
+.thoughts-title {
+    font-size: 4vw;
+    margin-bottom: 2vh;
+    font-weight: bold;
+    color: #fae9de;
+    text-align: center; /* Center the title */
+}
+
+.thoughts-description {
+    font-size: 1.5vw;
+    margin-bottom: 4vh;
+    line-height: 1.6;
+    color: #fae9de;
+    text-align: center; /* Center the text */
+}
+
+.thoughts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.thoughts-list::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjust to control the spacing above the line */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fae9de;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.thought-item {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease; /* Smooth transition */
+    max-height: 15vh; /* Initial height when not expanded */
+    opacity: 0.8;
+}
+
+.thought-item.expanded {
+    max-height: 1000px; /* Large enough to cover most content */
+    opacity: 1;
+}
+
+.thought-header {
+    display: block; /* Use flexbox for proper alignment */
+    align-items: center;
+    justify-content: flex-start; /* Align items to start */
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: #fae9de;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.thought-title {
+    font-size: 2vw;
+    color: #fae9de;
+    text-align: center;
+    flex: 1; /* Ensure the title takes up available space */
+    padding-right: 3vw;
+    margin-bottom: 5px; /* Add margin to create space below the title */
+}
+
+.thought-content {
+    padding: 0 20px 20px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.thought-item.expanded .thought-content {
+    opacity: 1;
+}
+
+.thought-content-text {
+    font-size: 1.2vw;
+    color: #fae9de;
+    line-height: 1.6;
+    text-align: justify; /* Justify the text */
+    hyphens: auto; /* Enable hyphenation */
+    -webkit-hyphens: auto; /* For WebKit browsers */
+    -moz-hyphens: auto; /* For Mozilla browsers */
+}
+
+
+
+

@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; /* Replace with 'Proxima Nova', sans-serif if using Proxima Nova */
+  background-color: #000; /* Optional: Set a background color for your entire site */
+  color: white; /* Universal text color */
+  overflow-y: scroll; /* Ensures scrolling is enabled */
+  scrollbar-width: none; /* For Firefox */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; /* Or 'Proxima Nova' */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  overflow-y: scroll; /* Allow vertical scrolling */
+  scrollbar-width: none; /* Firefox */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p, a {
+  font-family: 'Montserrat', sans-serif; /* Or 'Proxima Nova' */
 }
 
-.App-link {
-  color: #61dafb;
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
