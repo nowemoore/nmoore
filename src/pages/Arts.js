@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Arts.css';
 import ScrollableBackground from '../components/ScrollableBackground'; // Ensure the path is correct
 
-const Arts = () => {
+/* const Arts = () => {
     const artworks = [
         {
             id: 1,
@@ -37,3 +37,4 @@ const Arts = () => {
 };
 
 export default Arts;
+*/

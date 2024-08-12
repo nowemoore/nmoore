@@ -1,32 +1,30 @@
-/* Footer.css */
-
 .footer {
-    background-color: black;
-    color: #fae9de;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1vh 1vw;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2.5vh; /* Adjust height as needed */
-    z-index: 10;
-    opacity: 0.6;
-  }
-  
-  .footer-left {
-    font-size: 1rem;
-  }
-  
-  .footer-right {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .footer-signature {
-    height: 3vh; /* Adjust the size of the signature image */
-    margin-left: auto;
-  }
-  
+  background-color: black;
+  color: #fae9de;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 1vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5vh; /* Adjust height as needed */
+  z-index: 10;
+  opacity: 0.6;
+}
+
+.footer-left {
+  font-size: 1rem;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  justify-content: flex-end;
+}
+
+.footer-signature {
+  height: 3vh; /* Adjust the size of the signature image */
+  margin-left: 0.5rem; /* Add some space between the image and text */
+}
