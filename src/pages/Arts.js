@@ -2,8 +2,8 @@ import React from 'react';
 import './Arts.css';
 import ScrollableBackground from '../components/ScrollableBackground'; // Ensure the path is correct
 
-/* const Arts = () => {
-    const artworks = [
+const Arts = () => {
+/*    const artworks = [
         {
             id: 1,
             title: "Sunset Over the Mountains",
@@ -22,7 +22,7 @@ import ScrollableBackground from '../components/ScrollableBackground'; // Ensure
             description: "A dramatic painting capturing the tension and beauty of an approaching storm.",
             imageUrl: "storm.jpg", // Ensure the path to the image is correct
         }
-    ];
+    ];*/
 
     return (
         <ScrollableBackground backgroundImage="arts.jpg" overlay={true}>
@@ -37,4 +37,3 @@ import ScrollableBackground from '../components/ScrollableBackground'; // Ensure
 };
 
 export default Arts;
-*/
