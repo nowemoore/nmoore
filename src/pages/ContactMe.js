@@ -17,23 +17,23 @@ const ContactMe = () => {
                 </p>
 
                 <div className="social-links">
-                    <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://www.facebook.com/nika.datkova/" target="_blank" rel="noopener noreferrer" className="social-link">
                         <img src={FacebookIcon} alt="Facebook" />
                         <span>Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="social-link">
                         <img src={InstagramIcon} alt="Instagram" />
                         <span>Instagram</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://www.linkedin.com/in/nikola-moore-22748220b/" target="_blank" rel="noopener noreferrer" className="social-link">
                         <img src={LinkedInIcon} alt="LinkedIn" />
                         <span>LinkedIn</span>
                     </a>
-                    <a href="mailto:yourname@gmail.com" className="social-link">
+                    <a href="mailto:ndatkova@sas.upenn.edu" className="social-link">
                         <img src={EmailIcon} alt="Email" />
                         <span>Email</span>
                     </a>
-                    <a href="https://forms.gle/yourfeedbackform" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://forms.gle/cRouWxe3XHBuJqUs6" target="_blank" rel="noopener noreferrer" className="social-link">
                         <img src={FeedbackIcon} alt="Feedback Form" />
                         <span>Feedback</span>
                     </a>
