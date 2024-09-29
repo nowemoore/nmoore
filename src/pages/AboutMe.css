@@ -39,3 +39,25 @@
     color: #ffffff;
 }
 
+@media (max-width: 768px) {
+    .about-me-content {
+        max-width: 90%; /* Increase width for smaller screens */
+        padding: 3vw; /* Reduce padding */
+    }
+
+    .about-me-title {
+        font-size: 6vw; /* Larger font size on smaller screens */
+        margin-bottom: 3vh; /* Add more space below the title */
+    }
+
+    .about-me-text {
+        font-size: 3.5vw; /* Increase font size for readability */
+        margin-bottom: 5vh; /* Adjust margin */
+        text-align: left; /* Text alignment left for readability */
+    }
+
+    .cv-button {
+        padding: 2vw 5vw; /* Increase padding for buttons */
+        font-size: 3.5vw; /* Adjust font size for smaller screens */
+    }
+}

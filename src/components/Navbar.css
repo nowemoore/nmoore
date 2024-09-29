@@ -1,21 +1,21 @@
-/* Navbar.css */
-
+/* Regular Navbar for Desktop */
 .navbar {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 20px 40px;
+  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-  border-radius: 0 0 10px 10px;
-  height: 60px;
+  border-radius: 0 0 0.5rem 0.5rem;
+  height: 3.75rem;
   margin: 0;
 }
 
+/* Navbar links */
 .navbar-links {
   list-style-type: none;
   display: flex;
@@ -24,19 +24,20 @@
   padding: 0;
   align-items: center;
   height: 100%;
-  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+  transition: opacity 0.5s ease;
 }
 
 .navbar-links li {
   opacity: 0.6;
-  margin-left: 40px;
-  transition: transform 0.5s ease; /* Smooth transition for transform */
+  margin-left: 2.5rem;
+  transition: transform 0.5s ease;
+  display: flex; /* Flexbox to align icons and text */
+  align-items: center; /* Align icons with text vertically */
 }
 
-/* Apply hover effect directly to the list item to change opacity */
-.navbar-links li:hover, .navbar-links a:focus  {
-  transform: scale(1.1); /* Zoom in slightly on hover */
-  opacity: 0.95; /* Increase opacity on hover */
+.navbar-links li:hover, .navbar-links a:focus {
+  transform: scale(1.1);
+  opacity: 0.95;
 }
 
 .navbar-links li a {
@@ -44,16 +45,100 @@
   font-size: 1.1rem;
   color: #fae9de;
   font-weight: 700;
-  transition: color 0.5s ease; /* Smooth transition for color */
+  transition: color 0.5s ease;
+  display: flex;
+  align-items: center; /* Align icons and text horizontally */
 }
 
+.navbar-links li a i {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+/* Navbar underline */
 .navbar-underline {
   width: 100%;
   height: 2px;
   background-color: #fae9de;
-  margin-top: 5px;
+  margin-top: 0.3rem;
   opacity: 0.6;
 }
+
+/* Mobile Sidebar (hidden by default) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Off-screen to the right by default */
+  height: 100vh;
+  width: 70vw; /* Adjust based on your needs */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 15;
+  transition: right 0.3s ease; /* Smooth slide in from right */
+  display: flex;
+  flex-direction: column;
+  padding-top: 7rem;
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Webkit fallback */
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  padding: 1.5rem;
+  text-align: left;
+  display: flex; /* Flexbox to align icons and text */
+  align-items: center; /* Align icons with text vertically */
+}
+
+.sidebar-links li a {
+  font-size: 1.2rem;
+  color: #fae9de;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Align icons and text horizontally */
+}
+
+.sidebar-links li a i {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+/* Show sidebar when active */
+.sidebar.active {
+  right: 0; /* Slide in from the right */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem; /* Slightly larger font */
+  padding: 0.5rem 1rem; /* Add more padding to increase tappable area */
+  color: #fae9de;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+  border: 2px solid #fae9de; /* Optional: adds border to increase visibility */
+  border-radius: 5px; /* Rounded corners for better aesthetics */
+}
+
+/* Responsive Rules for Mobile/Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; /* Hide the navbar on small screens */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger */
+  }
+}
+
+
 
 
 
