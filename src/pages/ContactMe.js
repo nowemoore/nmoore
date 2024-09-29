@@ -24,7 +24,7 @@ const ContactMe = () => {
                         <img src={FacebookIcon} alt="Facebook" />
                         <span>Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://www.instagram.com/nowe.moore/" target="_blank" rel="noopener noreferrer" className="social-link">
                         <img src={InstagramIcon} alt="Instagram" />
                         <span>Instagram</span>
                     </a>
