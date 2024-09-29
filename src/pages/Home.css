@@ -80,7 +80,7 @@ body {
         align-items: center;
         text-align: center;
         width: 100%; /* Ensure full width for responsiveness */
-        margin-top: -20vh;
+        margin-top: -30vh;
         padding: 10px; /* Add padding to prevent text from getting cut off */
         overflow-y: auto; /* Allow content to scroll vertically if it overflows */
     }
