@@ -81,11 +81,13 @@
         position: absolute; /* Make the section absolutely positioned */
         top: 0; /* Position at the top */
         left: 0; /* Position at the left */
-        width: 70%;
+        width: 100%;
         height: 10vh; /* Increase height for small screens */
-        padding-top: 6vh; /* Remove padding-top for better alignment */
-        justify-content: flex-start; /* Align the content to the left */
-        align-items: flex-start; /* Align the content to the top */
+        padding-top: 47vh; /* Remove padding-top for better alignment */
+    }
+
+    .quote-content{
+        padding: 0 0;
     }
 
     .quote-mark {
@@ -93,7 +95,7 @@
     }
 
     .quote-text {
-        font-size: 6vw; /* Increase text size for readability on small screens */
+        font-size: 8vw; /* Increase text size for readability on small screens */
     }
 
     .quote-mark.left-quote, .quote-mark.right-quote {

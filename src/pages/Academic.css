@@ -1,3 +1,4 @@
+/* Desktop Version (Original) */
 .academic-title {
     font-size: 4vw;
     margin-bottom: 2vh;
@@ -113,6 +114,70 @@
     padding-bottom: 1vh;
     transition: max-height 0.5s ease-in, opacity 0.5s ease-in, padding 0.5s ease-in;
 }
+
+/* Incorporating the Date of Each Post */
+.paper-date {
+    font-size: 1.2vw;
+    color: #fae9de;
+    margin-bottom: 1vh;
+    text-align: left;
+    display: block;
+}
+
+/* Media Queries for Phones */
+@media (max-width: 767px) {
+    .papers-list {
+        padding: 0;
+    }
+
+    .paper-item {
+        width: 100%;
+        background-color: #2a2a2a; /* Default background for card */
+        color: white; /* Default font color */
+        margin-bottom: 4vh;
+        padding: 4vw;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for card effect */
+    }
+
+    .paper-description {
+        max-height: none; /* Make the description fully visible */
+        opacity: 1;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .paper-title {
+        font-size: 5vw;
+        color: white; /* Ensure title contrasts with background */
+    }
+
+    .paper-date {
+        font-size: 3vw;
+        margin-bottom: 1vh;
+        color: white; /* Date color for phone version */
+    }
+
+    .paper-item:nth-child(odd) {
+        background-color: #1e1e1e; /* Use alternating background colors */
+        color: #ffffff; /* Text color for contrast */
+    }
+
+    .paper-item:nth-child(even) {
+        background-color: #333333;
+        color: #ffffff;
+    }
+
+    .paper-buttons {
+        margin-top: 2vh;
+    }
+
+    .paper-button {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+}
+
 
 
 

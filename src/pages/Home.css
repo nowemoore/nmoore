@@ -65,12 +65,23 @@ body {
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
+  
     .center-container, .typewriter-text {
         max-width: 90%; /* Adjust width on smaller screens */
     }
 
     .typewriter-text {
         font-size: 4vw; /* Increase font size for readability on small screens */
-        padding-top: 0vh;
+    }
+
+    .typewriter-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Ensure full width for responsiveness */
+        margin-top: -20vh;
+        padding: 10px; /* Add padding to prevent text from getting cut off */
+        overflow-y: auto; /* Allow content to scroll vertically if it overflows */
     }
 }
