@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-left">
-                <p>Philadelphia, US</p> {/* Adjust location text as needed */}
+                <p>Philadelphia, PA, US</p> {/* Adjust location text as needed */}
             </div>
             <div className="footer-right">
                 <img src={signatureImage} alt="Signature" className="footer-signature" />
