@@ -8,15 +8,21 @@ const Home = () => {
     useEffect(() => {
         // Apply no-scroll class to body when this component is mounted
         document.body.classList.add('no-scroll');
+        document.body.style.overflowX = 'hidden'; // Prevent horizontal scroll
 
         // Cleanup: remove no-scroll class when this component is unmounted
         return () => {
             document.body.classList.remove('no-scroll');
+            document.body.style.overflowX = ''; // Reset horizontal scroll setting
         };
     }, []);
 
     return (
-        <BackgroundSection backgroundImage="intropic.jpg">
+        <BackgroundSection backgroundImage="intropic.jpg" overlay={false} scrollable={false} customStyles={{
+            maxWidth: '95%',  // Limit max width to 95% of viewport
+            width: '100%',    // Ensure full-width for smaller screens
+            overflowX: 'hidden', // Prevent horizontal scroll overflow
+        }}>
             <div className="center-container">
                 <QuoteSection 
                     quote="There's never been a story of more woe." 

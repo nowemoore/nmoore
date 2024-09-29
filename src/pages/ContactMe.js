@@ -9,7 +9,10 @@ import FeedbackIcon from '../assets/images/feedback-icon.png'; // Ensure this pa
 
 const ContactMe = () => {
     return (
-        <BackgroundSection backgroundImage="contactme.jpg" overlay={true}>
+        <BackgroundSection backgroundImage="contactme.jpg" overlay={true} scrollable={false} customStyles={{
+            paddingTop: '15vh',
+        }}
+        customClass="custom-academic-layout">
             <div className="contact-me-content">
                 <h1 className="contact-me-title">Get in touch!</h1>
                 <p className="contact-me-description">

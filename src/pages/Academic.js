@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Academic.css';
-import ScrollableBackground from '../components/ScrollableBackground'; 
+import BackgroundSection from '../components/BackgroundSection'; 
 import sepaper from '../assets/docs/se_paper.pdf';
 import seabs from '../assets/docs/se_abstract.pdf';
 import nlpp from '../assets/docs/nlp_principles.pdf';
@@ -65,7 +65,10 @@ const Academic = () => {
     };
 
     return (
-        <ScrollableBackground backgroundImage="academic.jpg" overlay={true}>
+        <BackgroundSection backgroundImage="academic.jpg" overlay={true} scrollable={true} customStyles={{
+            paddingBottom: '15vh',
+        }}
+        customClass="custom-academic-layout">
             <div className="academic-content">
                 <h1 className="academic-title">My Academic Work</h1>
                 <p className="academic-description">
@@ -104,7 +107,7 @@ const Academic = () => {
                     ))}
                 </div>
             </div>
-        </ScrollableBackground>
+            </BackgroundSection>
     );
 };
 

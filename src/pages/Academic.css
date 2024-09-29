@@ -24,6 +24,11 @@
     background-color: rgba(0, 0, 0, 0.5); /* Set background to black with 0.6 opacity */
     padding: 2vw;
     border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.paper-item:hover {
+    background-color: rgba(250, 233, 222, 0.05);
 }
 
 .paper-header {
@@ -35,7 +40,7 @@
 .toggle-button {
     background-color: transparent;
     border: none;
-    color: white;
+    color: #fae9de;
     font-size: 1.8vw;
     cursor: pointer;
     outline: none;
@@ -56,6 +61,7 @@
     text-align: left;
     flex: 1; /* Ensure the title takes up available space */
     padding-right: 5vw;
+    color: #fae9deeb;
 }
 
 .paper-buttons {
@@ -64,7 +70,7 @@
 }
 
 .paper-button {
-    background-color: #ffffff;
+    background-color: #fae9de;
     color: #000000;
     padding: 1vw 2vw;
     border-radius: 5px;
@@ -76,7 +82,7 @@
 
 .paper-button:hover {
     background-color: #000000;
-    color: #ffffff;
+    color: #fae9de;
 }
 
 /* Style for Read Translation button */
@@ -97,6 +103,7 @@
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
     padding-top: 0;
     padding-bottom: 0;
+    text-align: left;
 }
 
 .paper-item.expanded .paper-description {

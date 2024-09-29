@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Thoughts.css';
-import ScrollableBackground from '../components/ScrollableBackground'; // Ensure the path is correct
+import BackgroundSection from '../components/BackgroundSection'; // Ensure the path is correct
 
 const Thoughts = () => {
     const thoughts = [
@@ -21,7 +21,7 @@ const Thoughts = () => {
         },
         {
             id: 4,
-            title: "The Definition of Science",
+            title: "The Very Definition of Science",
             content: "Why does everyone keep calling linguistics a social science? No way anyone who's ever touched actual linguistics will possibly call it a social science. The study of meaning requires employing the most advanced formal logic. Generative syntax is nothing but graph theory. Defining structures that generate any grammatical string but do not overgenerate the ungrammatical is computationally hard. There is a reason why gifted mathematicians make the greatest linguists—and it’s not because linguistics is a [diligent] social science."
         },
         {
@@ -41,7 +41,10 @@ const Thoughts = () => {
     };
 
     return (
-        <ScrollableBackground backgroundImage="thoughts.jpg" overlay={true}>
+        <BackgroundSection backgroundImage="thoughts.jpg" overlay={true} scrollable={true} customStyles={{
+            paddingBottom: '20vh',
+        }}
+        customClass="custom-thoughts-layout">
             <div className="thoughts-content">
                 <h1 className="thoughts-title">Random Thoughts</h1>
                 <p className="thoughts-description">
@@ -65,7 +68,7 @@ const Thoughts = () => {
                     ))}
                 </div>
             </div>
-        </ScrollableBackground>
+            </BackgroundSection>
     );
 };
 

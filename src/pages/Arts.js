@@ -1,6 +1,6 @@
 import React from 'react';
 import './Arts.css';
-import ScrollableBackground from '../components/ScrollableBackground'; // Ensure the path is correct
+import BackgroundSection from '../components/BackgroundSection'; // Ensure the path is correct
 
 const Arts = () => {
 /*    const artworks = [
@@ -25,14 +25,14 @@ const Arts = () => {
     ];*/
 
     return (
-        <ScrollableBackground backgroundImage="arts.jpg" overlay={true}>
+        <BackgroundSection backgroundImage="arts.jpg" overlay={true} scrollable={false}>
             <div className="arts-content">
                 <h1 className="arts-title">My Artworks</h1>
                 <p className="arts-description">
                     Welcome to an empty page which may or may not get updated sometime after I graduate.
                 </p>
             </div>
-        </ScrollableBackground>
+            </BackgroundSection>
     );
 };
 

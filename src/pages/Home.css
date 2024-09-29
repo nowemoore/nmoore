@@ -1,22 +1,29 @@
+/* Prevent horizontal scroll on small screens */
+body {
+    overflow-x: hidden;
+}
+
 .no-scroll {
-    overflow: hidden; /* Prevents scrolling */
+    overflow: hidden; /* Prevents vertical scrolling */
 }
 
 .center-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
-    height: 50vh; /* Half the viewport height */
-    margin-top: 10vh; /* Push the container down to start from just below the middle of the screen */
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: 10vh;
     text-align: center;
+    max-width: 100%; /* Ensure the container doesn't exceed the viewport width */
+    box-sizing: border-box;
 }
 
 .title-container {
-    position: relative; /* Position relative to handle overlay and z-indexing */
-    text-align: center; /* Center the title and the image */
-    display: inline-block; /* Keep the container inline for proper text alignment */
-    width: 100%; /* Ensure it takes the full width for centering */
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    width: 100%; /* Full width for proper text alignment */
 }
 
 .overlay-container::after {
@@ -26,25 +33,43 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with 0.7 transparency */
-    z-index: 3; /* Overlay on top of the image */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3;
 }
 
 .typewriter-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh; /* Adjust this if you want the container to be less than full screen height */
     text-align: center;
-    margin-top: -10vh; /* Move the typewriter text upwards */
+    width: 100%; /* Ensure full width for responsiveness */
+    margin-top: -10vh;
+    padding: 10px; /* Add padding to prevent text from getting cut off */
+    overflow-y: auto; /* Allow content to scroll vertically if it overflows */
 }
 
 .typewriter-text {
-    font-size: 2vw; /* Adjust the size as needed */
+    font-size: 2vw; /* Responsive font size */
     max-width: 60%; /* Limits the width to 60% of the screen */
-    margin: 0 auto; /* Centers the text block */
+    margin: 0 auto;
     line-height: 1.5;
     white-space: pre-wrap; /* Ensures that text wraps correctly */
-    color: #fae9de; /* Adjust text color if necessary */
+    color: #fae9de;
     opacity: 0.8;
+    overflow-wrap: break-word; /* Prevent long words from causing overflow */
+    word-wrap: break-word;
+    box-sizing: border-box;
+    padding-bottom: 10px; /* Add padding to ensure full visibility */
+    padding-top: 5vh;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .center-container, .typewriter-text {
+        max-width: 90%; /* Adjust width on smaller screens */
+    }
+
+    .typewriter-text {
+        font-size: 4vw; /* Increase font size for readability on small screens */
+    }
 }

@@ -1,7 +1,6 @@
 .thoughts-content {
     text-align: center;
     color: #fae9de;
-    padding: 20px;
 }
 
 .thoughts-title {
@@ -26,28 +25,33 @@
     align-items: center;
     gap: 20px;
     position: relative;
+    padding-top: 20px; /* Add space between the line and the first list item */
 }
 
 .thoughts-list::before {
     content: "";
     position: absolute;
-    top: -10px; /* Adjust to control the spacing above the line */
+    top: 0;
     left: 0;
     right: 0;
     height: 2px;
     background-color: #fae9de;
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    margin: auto;
 }
 
 .thought-item {
     width: 80%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(250, 233, 222, 0.05);
     border-radius: 10px;
     overflow: hidden;
-    transition: max-height 0.5s ease, opacity 0.3s ease; /* Smooth transition */
     max-height: 15vh; /* Initial height when not expanded */
     opacity: 0.8;
+    transition: background-color 0.5s ease, opacity 1s ease, max-height 0.5s ease; /* Combined transitions */
+}
+
+.thought-item:hover {
+    background-color: rgba(250, 233, 222, 0.15);
 }
 
 .thought-item.expanded {

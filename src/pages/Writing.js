@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Writing.css';
-import ScrollableBackground from '../components/ScrollableBackground';
+import BackgroundSection from '../components/BackgroundSection';
 import crushespdf from "../assets/docs/crushes.pdf";
 import crushespdfsk from "../assets/docs/crushes_sk.pdf";
 import everybodycalmdown from "../assets/docs/everybody_calm_down.pdf";
@@ -38,7 +38,10 @@ const Writing = () => {
     };
 
     return (
-        <ScrollableBackground backgroundImage="writing.jpg" overlay={true}>
+        <BackgroundSection backgroundImage="academic.jpg" overlay={true} scrollable={true}   customStyles={{
+            paddingBottom: '15vh',
+        }}
+        customClass="custom-writing-layout">
             <div className="writing-content">
                 <h1 className="writing-title">My Writings</h1>
                 <p className="writing-intro">
@@ -73,7 +76,7 @@ const Writing = () => {
                     ))}
                 </div>
             </div>
-        </ScrollableBackground>
+            </BackgroundSection>
     );
 };
 

@@ -5,7 +5,18 @@ import cvPDF from '../assets/docs/cv.pdf'; // Replace with your CV PDF path
 
 const AboutMe = () => {
     return (
-        <BackgroundSection backgroundImage="aboutme.jpg" overlay={true}>
+<BackgroundSection
+    backgroundImage="aboutme.jpg"
+    overlay={true}
+    scrollable={false}
+    customStyles={{
+        width: '90%',  // Custom width
+        textAlign: 'left',
+        display: 'flex',  // Ensures Flexbox layout is applied
+        justifyContent: 'flex-start',  // Align content to the top (vertical alignment)
+        alignItems: 'flex-start',
+    }}
+    customClass="custom-aboutme-layout">
             <div className="about-me-content">
                 <h1 className="about-me-title">Something about me.</h1>
                 <p className="about-me-text">

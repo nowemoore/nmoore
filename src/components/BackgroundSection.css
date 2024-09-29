@@ -1,44 +1,55 @@
 /* BackgroundSection.css */
 
 .background-section {
-  background-attachment: fixed; /* Keeps the background fixed in place */
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   height: 100vh;
-  position: relative;
-  overflow: hidden; /* Prevents any overflow issues with the background */
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
 .background-content {
   position: relative;
   z-index: 2;
-  overflow-y: scroll; /* Allows content to scroll */
   height: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  box-sizing: border-box;
+  width: 70%; /* Default width, override with props */
+  margin: 0 auto;
+  padding-left: 5vw; /* Custom side padding */
+  padding-right: 5vw; /* Custom side padding */
+  padding-bottom: 0; /* Default bottom padding is 0, you can adjust if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text if needed */
   opacity: 1;
-  transition: opacity 1.5s ease-in-out; /* Smooth fade-in */
-
-  /* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-
-  /* Hide scrollbar for Chrome, Safari, and Edge */
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  transition: opacity 1.5s ease-in-out;
 }
 
-.background-content::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* Make the scrollbar background transparent */
+/* Add scroll if content is scrollable */
+.background-content.scrollable {
+  overflow-y: auto;
 }
 
-.background-content {
-  scrollbar-width: none; /* Firefox */
-}
 
-.background-content::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Handle of the scrollbar */
-}
+
+
 
 
 
