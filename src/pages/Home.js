@@ -18,7 +18,7 @@ const Home = () => {
     }, []);
 
     return (
-        <BackgroundSection backgroundImage="intropic.jpg" overlay={false} scrollable={false} customStyles={{
+        <BackgroundSection backgroundImage="intropic.jpg" backgroundImageM="intropic-mobile.jpg" overlay={false} scrollable={false} customStyles={{
             maxWidth: '95%',  // Limit max width to 95% of viewport
             width: '100%',    // Ensure full-width for smaller screens
             overflowX: 'hidden', // Prevent horizontal scroll overflow

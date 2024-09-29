@@ -71,5 +71,6 @@ body {
 
     .typewriter-text {
         font-size: 4vw; /* Increase font size for readability on small screens */
+        padding-top: 0vh;
     }
 }

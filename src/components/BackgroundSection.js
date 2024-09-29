@@ -1,22 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import './BackgroundSection.css';
 
-const BackgroundSection = ({ backgroundImage, children, overlay, scrollable, customStyles, customClass }) => {
+const BackgroundSection = ({ backgroundImage, backgroundImageM, children, overlay, scrollable, customStyles, customClass }) => {
     const [isVisible, setIsVisible] = useState(false);
+    const [currentBackground, setCurrentBackground] = useState(backgroundImage); // Set initial background image
 
-    // Scroll to top when the component mounts
     useEffect(() => {
-        window.scrollTo(0, 0); // Ensure the window scrolls to the top
+        // Function to determine which background image to use based on window width
+        const handleResize = () => {
+            const isMobile = window.innerWidth <= 768; // Define mobile size threshold
+            setCurrentBackground(isMobile && backgroundImageM ? backgroundImageM : backgroundImage);
+        };
+
+        // Set background image on mount and listen to resize
+        handleResize(); // Call on initial load
+        window.addEventListener('resize', handleResize); // Update on window resize
 
         const timer = setTimeout(() => {
-            setIsVisible(true);
+            setIsVisible(true); // Control the fade-in effect
         }, 100); // Delay to ensure the visibility change starts after mount
 
-        return () => clearTimeout(timer);
-    }, []); // Empty dependency array ensures this runs only on mount
+        // Cleanup event listener and timer
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [backgroundImage, backgroundImageM]); // Run when background image props change
 
     const sectionStyle = {
-        backgroundImage: `url(${require(`../assets/images/${backgroundImage}`)})`,
+        backgroundImage: `url(${require(`../assets/images/${currentBackground}`)})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
@@ -68,6 +80,7 @@ const BackgroundSection = ({ backgroundImage, children, overlay, scrollable, cus
 };
 
 export default BackgroundSection;
+
 
 
 

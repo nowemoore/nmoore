@@ -28,3 +28,9 @@
   height: 3vh; /* Adjust the size of the signature image */
   margin-left: 0.5rem; /* Add some space between the image and text */
 }
+
+@media (max-width: 768px) {
+  .footer{
+    display: none;
+  }
+}

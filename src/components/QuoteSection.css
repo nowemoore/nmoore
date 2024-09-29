@@ -55,7 +55,6 @@
 
 /* Media Queries for Responsiveness */
 
-/* For medium screens (tablets) */
 @media (max-width: 1023px) and (min-width: 768px) {
     .quote-section {
         height: 30vh; /* Adjust height for tablets */
@@ -79,22 +78,27 @@
 /* For small screens (phones) */
 @media (max-width: 767px) {
     .quote-section {
-        width: 90%;
-        height: 40vh; /* Increase height for small screens */
+        position: absolute; /* Make the section absolutely positioned */
+        top: 0; /* Position at the top */
+        left: 0; /* Position at the left */
+        width: 70%;
+        height: 10vh; /* Increase height for small screens */
+        padding-top: 6vh; /* Remove padding-top for better alignment */
+        justify-content: flex-start; /* Align the content to the left */
+        align-items: flex-start; /* Align the content to the top */
     }
 
     .quote-mark {
-        font-size: 100vw; /* Larger font size for small screens */
+        font-size: 70vw; /* Larger font size for small screens */
     }
 
     .quote-text {
-        font-size: 7vw; /* Increase text size for readability on small screens */
+        font-size: 6vw; /* Increase text size for readability on small screens */
     }
 
     .quote-mark.left-quote, .quote-mark.right-quote {
-        top: 0%; /* Adjust vertical position for small screens */
+        top: 50%; /* Adjust vertical position for small screens */
         left: calc(15%); /* Ensure consistent spacing on small screens */
         right: calc(15%); /* Ensure consistent spacing on small screens */
     }
 }
-
