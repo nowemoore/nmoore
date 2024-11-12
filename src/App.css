@@ -45,10 +45,12 @@ html::-webkit-scrollbar {
 
 /* Media Query for Phone (Mobile) Screens */
 @media (max-width: 767px) {
-  .custom-academic-layout {
-    padding: 0 !important; /* Remove padding for phone version */
-    width: 100%; /* Ensure it occupies the full width */
-    box-sizing: border-box; /* Make sure padding and borders are included in width */
+  .background-content.custom-academic-layout {
+    width: 100% !important;  /* Make the content full width */
+    margin: 0 auto !important; /* Remove any unwanted margin */
+    padding-left: 0 !important; /* Adjust padding for smaller screens */
+    padding-right: 0 !important;
+    text-align: left;  /* Ensure text is aligned for readability */
   }
 
   /* Adjust body for mobile specific needs */
@@ -64,24 +66,6 @@ html::-webkit-scrollbar {
   
   p, a {
     font-size: 4vw;
-  }
-}
-
-/* Media Query for Tablet and Desktop Screens */
-@media (min-width: 768px) {
-  .custom-academic-layout {
-    padding: 20px; /* Standard padding for desktop and tablet */
-    width: 70%; /* Example: content width adjusted for larger screens */
-    margin: 0 auto;
-  }
-
-  /* Larger font sizes for desktop and tablet */
-  h1 {
-    font-size: 2.5vw;
-  }
-
-  p, a {
-    font-size: 1.2vw;
   }
 }
 

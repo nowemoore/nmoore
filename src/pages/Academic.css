@@ -26,6 +26,9 @@
     padding: 2vw;
     border-radius: 5px;
     transition: background-color 0.5s ease;
+    display: flex;
+    flex-direction: column; /* Stack title, description, and buttons vertically */
+    justify-content: flex-start;
 }
 
 .paper-item:hover {
@@ -38,24 +41,6 @@
     align-items: center;
 }
 
-.toggle-button {
-    background-color: transparent;
-    border: none;
-    color: #fae9de;
-    font-size: 1.8vw;
-    cursor: pointer;
-    outline: none;
-    margin-right: 1vw;
-    transform: rotate(0deg) scaleY(0.5); /* Initial state: flattened character */
-    display: inline-block;
-    line-height: 1; /* Ensure no extra space around the character */
-    transition: transform 0.5s ease-out; /* Smooth rotation and scaling */
-}
-
-.paper-item.expanded .toggle-button {
-    transform: rotate(180deg) scaleY(0.5); /* Pointing upward and flattened when expanded */
-}
-
 .paper-title {
     font-size: 1.8vw;
     margin: 0;
@@ -63,6 +48,7 @@
     flex: 1; /* Ensure the title takes up available space */
     padding-right: 5vw;
     color: #fae9deeb;
+    padding-top: 2vh;
 }
 
 .paper-buttons {
@@ -98,34 +84,65 @@
 }
 
 .paper-description {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-    padding-top: 0;
-    padding-bottom: 0;
-    text-align: left;
-}
-
-.paper-item.expanded .paper-description {
-    max-height: 500px; /* Adjust based on your content */
-    opacity: 1;
+    max-height: none; /* Make sure description is fully visible */
+    opacity: 1; /* Ensure description is visible */
     padding-top: 1vh;
     padding-bottom: 1vh;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, padding 0.5s ease-in;
+    text-align: left;
+    color: #fae9de;
+    line-height: 1.6;
 }
 
 /* Incorporating the Date of Each Post */
 .paper-date {
-    font-size: 1.2vw;
-    color: #fae9de;
-    margin-bottom: 1vh;
-    text-align: left;
-    display: block;
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    font-size: 1.2vw; /* Default font size */
+    font-style: italic; /* Default italics */
+    color: #fae9de; /* Light color to contrast */
+    z-index: 1; /* Ensure the date appears above other content */
+    margin: 0;
+    padding: 0;
+    padding-top: 1vh;
 }
 
-/* Media Queries for Phones */
+/* Allow for easy customization in desktop and mobile */
+.paper-item {
+    position: relative; /* Ensure the date is placed relative to the paper item */
+}
+
 @media (max-width: 767px) {
+    .paper-date {
+        position: absolute;
+        top: 1vh;
+        right: 2vw;
+        font-size: 3vw; /* Default font size */
+        font-style: italic; /* Default italics */
+        color: #fae9de; /* Light color to contrast */
+        z-index: 1; /* Ensure the date appears above other content */
+        margin: 0;
+        padding: 0;
+        padding-right: 2vw;
+    }
+
+    .academic-title {
+        font-size: 8vw; /* Make the title much larger on mobile */
+        text-align: center; /* Center the title horizontally */
+        margin-bottom: 2vh; /* Space between title and description */
+    }
+
+    .academic-description {
+        font-size: 4vw; /* Adjust description size */
+        color: #fae9de; /* Make sure the text is light */
+        text-align: center; /* Center the description */
+        margin-bottom: 4vh;
+    }
+
+    .academic-title::after {
+        content: none !important; /* Remove any pseudo-element line */
+    }
+
     .papers-list {
         padding: 0;
     }
@@ -134,54 +151,67 @@
         width: 100%;
         background-color: #2a2a2a; /* Default background for card */
         color: white; /* Default font color */
-        margin-bottom: 4vh;
-        padding: 4vw;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for card effect */
-    }
-
-    .paper-description {
-        max-height: none; /* Make the description fully visible */
-        opacity: 1;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
+        padding: 5vw; /* Padding for content */
+        margin-bottom: 0; /* Space between paper items */
+        border-radius: 0; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column; /* Stack title, description, and buttons vertically */
+        justify-content: flex-start;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
     }
 
     .paper-title {
-        font-size: 5vw;
-        color: white; /* Ensure title contrasts with background */
+        font-size: 5vw; /* Larger font size for mobile */
+        color: white; /* Title contrasts with background */
+        margin-bottom: 1vh; /* Space between title and description */
+        text-align: center; /* Center title */
+        width: 100%; /* Full width for title */
     }
 
-    .paper-date {
-        font-size: 3vw;
-        margin-bottom: 1vh;
-        color: white; /* Date color for phone version */
-    }
-
-    .paper-item:nth-child(odd) {
-        background-color: #1e1e1e; /* Use alternating background colors */
-        color: #ffffff; /* Text color for contrast */
-    }
-
-    .paper-item:nth-child(even) {
-        background-color: #333333;
-        color: #ffffff;
+    .paper-description {
+        font-size: 3vw; /* Smaller description font */
+        padding-top: 0;
+        padding-bottom: 0;
+        color: #fae9de; /* Light text for description */
+        line-height: 1.6;
+        text-align: center; /* Center description */
+        margin-bottom: 2vh; /* Space between description and buttons */
     }
 
     .paper-buttons {
-        margin-top: 2vh;
+        display: flex;
+        justify-content: center; /* Center buttons horizontally */
+        gap: 2vw;
+        width: 100%; /* Ensure buttons take full width */
     }
 
     .paper-button {
-        font-size: 4vw;
-        padding: 2vw;
+        font-size: 3.5vw;
+        padding: 2vw 4vw;
+        background-color: #fae9de;
+        color: #000000;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .paper-button:hover {
+        background-color: #000000;
+        color: #fae9de;
+    }
+
+    /* Use alternating background colors for mobile */
+    .paper-item:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+    }
+
+    .paper-item:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #ffffff;
     }
 }
-
-
-
-
-
-
-
-
