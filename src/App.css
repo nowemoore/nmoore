@@ -2,30 +2,30 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif; /* Replace with 'Proxima Nova', sans-serif if using Proxima Nova */
-  background-color: #000; /* Optional: Set a background color for your entire site */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000; /* Background color for the entire site */
   color: white; /* Universal text color */
-  overflow-y: scroll; /* Ensures vertical scrolling is enabled */
+  overflow-y: scroll; /* Enables vertical scrolling */
   scrollbar-width: none; /* For Firefox */
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif; /* Or 'Proxima Nova' */
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
-  overflow-y: scroll; /* Allow vertical scrolling */
+  overflow-y: scroll; /* Allows vertical scrolling */
   scrollbar-width: none; /* For Firefox */
   scroll-behavior: smooth;
 }
 
 p, a {
-  font-family: 'Montserrat', sans-serif; /* Or 'Proxima Nova' */
+  font-family: 'Montserrat', sans-serif;
 }
 
 html::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none; /* Hides the scrollbar in Chrome, Safari, Edge */
 }
 
 /* Universal class to reset margins and padding for sections */
@@ -35,38 +35,45 @@ html::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
-/* Add styles for the .custom-academic-layout class */
+/* Custom Layout for Academic Section */
 .custom-academic-layout {
   width: 100%;
-  padding: 20px; /* Padding for desktop */
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.custom-writing-layout {
+  width: 100%;
+  padding: 20px;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
 /* Media Query for Phone (Mobile) Screens */
 @media (max-width: 767px) {
-  .background-content.custom-academic-layout {
-    width: 100% !important;  /* Make the content full width */
-    margin: 0 auto !important; /* Remove any unwanted margin */
-    padding-left: 0 !important; /* Adjust padding for smaller screens */
+  .background-content.custom-academic-layout, .background-content.custom-writing-layout  {
+    width: 100% !important;  /* Full width */
+    margin: 0 auto !important; /* Remove unwanted margin */
+    padding-left: 0 !important; /* Adjust padding */
     padding-right: 0 !important;
-    text-align: left;  /* Ensure text is aligned for readability */
+    text-align: left;  /* Text alignment for readability */
   }
 
-  /* Adjust body for mobile specific needs */
   body {
     padding: 0;
-    overflow-x: hidden; /* Ensure no horizontal scroll */
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
 
-  /* Adjust font size and spacing for better mobile readability */
+  /* Adjust font size and spacing for mobile */
   h1 {
     font-size: 6vw;
   }
-  
+
   p, a {
     font-size: 4vw;
   }
 }
+
 
 

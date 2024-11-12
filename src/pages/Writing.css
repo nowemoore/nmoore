@@ -1,38 +1,38 @@
-/* General Layout */
+/* Desktop Version (Original) */
+
+/* Title for the Page */
 .writing-title {
-    font-size: 4vw;
+    font-size: 4vw; /* Adjusted for desktop */
     margin-bottom: 2vh;
     font-weight: bold;
     color: #fae9de;
 }
 
+/* Intro Text for the Page */
 .writing-intro {
-    font-size: 1.5vw;
+    font-size: 1.5vw; /* Adjusted for desktop */
+    margin-bottom: 4vh;
     line-height: 1.6;
     color: #fae9de;
 }
 
-.writing-description {
-    font-size: 1.5vw;
-    line-height: 1.6;
-    color: #fae9de;
-}
-
+/* List of Writings */
 .writings-list {
     border-top: 1px solid #fae9de;
     padding-top: 2vh;
-    padding-bottom: 2vh;
-    margin: 0 auto;
+    padding-bottom: 2vh; /* Add some padding to the bottom of the writings list */
+    margin: 0 auto; /* Center the list horizontally */
 }
 
+/* Style for Each Writing Item */
 .writing-item {
     margin-bottom: 2vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Set background to black with 0.5 opacity */
     padding: 2vw;
     border-radius: 5px;
     transition: background-color 0.5s ease;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack title, description, and buttons vertically */
     justify-content: flex-start;
 }
 
@@ -40,36 +40,25 @@
     background-color: rgba(250, 233, 222, 0.05);
 }
 
+/* Header for each writing item */
 .writing-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.toggle-button {
-    background-color: transparent;
-    border: none;
-    color: #fae9de;
-    font-size: 1.8vw;
-    cursor: pointer;
-    outline: none;
-    margin-right: 1vw;
-    transform: rotate(0deg) scaleY(0.5);
-    transition: transform 0.5s ease-out;
-}
-
-.writing-item.expanded .toggle-button {
-    transform: rotate(180deg) scaleY(0.5);
-}
-
-.paper-title {
-    font-size: 1.8vw;
+/* Title for Each Writing Item (Inside the writing-item container) */
+.writing-paper-title {
+    font-size: 1.8vw; /* Adjusted for desktop */
     margin: 0;
     text-align: left;
-    flex: 1;
+    flex: 1; /* Ensure the title takes up available space */
+    padding-right: 5vw;
     color: #fae9deeb;
+    padding-top: 2vh;
 }
 
+/* Buttons for Each Writing Item */
 .writing-buttons {
     display: flex;
     gap: 1vw;
@@ -83,7 +72,7 @@
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
-    font-size: 1.2vw;
+    font-size: 1.2vw; /* Adjusted for desktop */
 }
 
 .writing-button:hover {
@@ -91,8 +80,9 @@
     color: #fae9de;
 }
 
+/* Style for Read Translation button */
 .writing-button-translation {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent */
     color: #000000;
     padding: 1vw 2vw;
     border-radius: 5px;
@@ -101,72 +91,134 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Description for Each Writing Item */
 .writing-description {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.writing-item.expanded .writing-description {
-    max-height: 500px;
-    opacity: 1;
+    max-height: none; /* Make sure description is fully visible */
+    opacity: 1; /* Ensure description is visible */
     padding-top: 1vh;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in, padding 0.5s ease-in;
+    padding-bottom: 1vh;
+    text-align: left;
+    color: #fae9de;
+    line-height: 1.6;
 }
 
-/* Mobile responsiveness */
+/* Incorporating the Date of Each Post */
+.writing-date {
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    font-size: 1.2vw; /* Default font size */
+    font-style: italic; /* Default italics */
+    color: #fae9de; /* Light color to contrast */
+    z-index: 1; /* Ensure the date appears above other content */
+    margin: 0;
+    padding: 0;
+    padding-top: 1vh;
+}
+
+/* Allow for easy customization in desktop and mobile */
+.writing-item {
+    position: relative; /* Ensure the date is placed relative to the writing item */
+}
+
+.writing-date {
+    font-size: 1.2vw;
+    font-style: italic;
+    color: #fae9de;
+    margin-top: 1vh;
+}
+
 @media (max-width: 767px) {
-    .writing-title {
-        font-size: 8vw;
-        text-align: center;
-        margin-bottom: 2vh;
+    .writing-date {
+        font-size: 3vw; /* Adjusted font size for mobile */
+        color: #fae9de;
+        margin-top: 2vh;
     }
 
+    /* Adjust Title Date for Mobile */
+    .writing-date {
+        position: absolute;
+        top: 1vh;
+        right: 2vw;
+        font-size: 3vw; /* Adjusted for mobile */
+        font-style: italic; /* Default italics */
+        color: #fae9de; /* Light color to contrast */
+        z-index: 1; /* Ensure the date appears above other content */
+        margin: 0;
+        padding: 0;
+        padding-right: 2vw;
+    }
+
+    /* Title for the Page (on mobile) */
+    .writing-title {
+        font-size: 8vw; /* Increased font size on mobile */
+        text-align: center; /* Center the title horizontally */
+        margin-bottom: 2vh; /* Space between title and description */
+    }
+
+    /* Intro Text for the Page (on mobile) */
     .writing-intro {
-        font-size: 4vw;
-        color: #fae9de;
-        text-align: center;
+        font-size: 4vw; /* Adjust description size for mobile */
+        color: #fae9de; /* Ensure light text color */
+        text-align: center; /* Center the description */
         margin-bottom: 4vh;
     }
 
+    .writing-title::after {
+        content: none !important; /* Remove any pseudo-element line */
+    }
+
+    .writings-list {
+        padding: 0;
+    }
+
+    /* Each Writing Item (on mobile) */
     .writing-item {
-        background-color: #2a2a2a;
-        padding: 5vw;
-        margin-bottom: 0;
-        border-radius: 0;
+        width: 100%;
+        background-color: #2a2a2a; /* Default background for card */
+        color: white; /* Default font color */
+        padding: 5vw; /* Padding for content */
+        margin-bottom: 0; /* Space between writing items */
+        border-radius: 0; /* Rounded corners */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Stack title, description, and buttons vertically */
         justify-content: flex-start;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
     }
 
-    .paper-title {
-        font-size: 5vw;
-        color: white;
-        margin-bottom: 1vh;
-        text-align: center;
+    /* Title for Each Writing Item (on mobile) */
+    .writing-paper-title {
+        font-size: 5vw; /* Larger font size for mobile */
+        color: white; /* Title contrasts with background */
+        margin-bottom: 1vh; /* Space between title and description */
+        text-align: center; /* Center the title */
+        width: 100%; /* Full width for title */
     }
 
+    /* Description for Each Writing Item (on mobile) */
     .writing-description {
-        font-size: 3vw;
+        font-size: 3vw; /* Smaller description font for mobile */
         padding-top: 0;
         padding-bottom: 0;
-        color: #fae9de;
-        text-align: center;
-        margin-bottom: 2vh;
+        color: #fae9de; /* Light text for description */
+        line-height: 1.6;
+        text-align: center; /* Center the description */
+        margin-bottom: 2vh; /* Space between description and buttons */
     }
 
+    /* Buttons for Each Writing Item (on mobile) */
     .writing-buttons {
         display: flex;
-        justify-content: center;
+        justify-content: center; /* Center buttons horizontally */
         gap: 2vw;
-        width: 100%;
+        width: 100%; /* Ensure buttons take full width */
     }
 
     .writing-button {
-        font-size: 3.5vw;
+        font-size: 3.5vw; /* Adjusted button font size for mobile */
         padding: 2vw 4vw;
         background-color: #fae9de;
         color: #000000;
@@ -180,5 +232,18 @@
         background-color: #000000;
         color: #fae9de;
     }
+
+    /* Use alternating background colors for mobile */
+    .writing-item:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+    }
+
+    .writing-item:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #ffffff;
+    }
 }
+
+
 
