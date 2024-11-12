@@ -1,4 +1,4 @@
-
+/* Contact Me Section */
 .contact-me-content {
     text-align: center;
     color: #fae9de;
@@ -6,9 +6,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70vh; /* Adjust to start content higher up */
+    min-height: 70vh;
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 0vh; /* Ensure some space at the top */
 }
 
 .contact-me-title {
@@ -25,22 +26,26 @@
     color: #fae9de;
 }
 
+/* Social Links container */
 .social-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    justify-content: center; /* Center items horizontally */
+    gap: 40px; /* Adjust gap between items */
     margin-top: 30px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .social-link {
     display: block;
-    width: 7vw;
-    height: 7vw;
+    width: 7vw; /* Set width for social icons */
+    height: 7vw; /* Set height for social icons */
     text-decoration: none;
     text-align: center;
     opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    padding-bottom: 3vh;
 }
 
 .social-link img {
@@ -53,7 +58,6 @@
 
 .social-link:hover {
     transform: scale(1.1);
-    transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 1;
 }
 
@@ -65,6 +69,37 @@
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
+
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+    .contact-me-title {
+        font-size: 8vw;
+        margin-bottom: 4vh;
+    }
+
+    .contact-me-description {
+        font-size: 4vw;
+        margin-bottom: 6vh;
+    }
+
+    .social-links {
+        gap: 30px; /* Adjust gap for mobile */
+        justify-content: center; /* Ensure icons are centered */
+    }
+
+    .social-link {
+        width: 20vw; /* Increase size of icons on mobile */
+        height: 20vw;
+    }
+
+    .social-link span {
+        font-size: 4vw; /* Adjust font size for mobile */
+    }
+}
+
+
+
+
 
 
 
