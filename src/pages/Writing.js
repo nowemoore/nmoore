@@ -38,21 +38,20 @@ const Writing = () => {
     };
 
     return (
-        <BackgroundSection backgroundImage="academic.jpg" overlay={true} scrollable={true}   customStyles={{
+        <BackgroundSection backgroundImage="academic.jpg" overlay={true} scrollable={true} customStyles={{
             paddingBottom: '15vh',
         }}
         customClass="custom-writing-layout">
             <div className="writing-content">
                 <h1 className="writing-title">My Writings</h1>
                 <p className="writing-intro">
-                Here is some of my passion writing. Read at your own risk. Find West Slavic translation with some pieces.
+                    Here is some of my passion writing. Read at your own risk. Find West Slavic translation with some pieces.
                 </p>
                 <div className="writings-list">
                     {papers.map(paper => (
                         <div key={paper.id} className={`writing-item ${expandedPaper === paper.id ? 'expanded' : ''}`}>
-                            <div className="paper-header">
+                            <div className="writing-header">
                                 <button className="toggle-button" onClick={() => togglePaper(paper.id)}>
-                                    
                                     {expandedPaper === paper.id ? '\u25B2' : '\u25BC'}
                                 </button>
                                 <h2 className="paper-title">{paper.title}</h2>
@@ -68,16 +67,15 @@ const Writing = () => {
                                 </div>
                             </div>
                             <div className="writing-description">
-                                <div className="writing-description-content">
-                                    <p>{paper.description}</p>
-                                </div>
+                                <p>{paper.description}</p>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-            </BackgroundSection>
+        </BackgroundSection>
     );
 };
 
 export default Writing;
+

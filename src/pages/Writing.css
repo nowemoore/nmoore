@@ -1,3 +1,4 @@
+/* General Layout */
 .writing-title {
     font-size: 4vw;
     margin-bottom: 2vh;
@@ -5,10 +6,10 @@
     color: #fae9de;
 }
 
-.writing-intro{
+.writing-intro {
     font-size: 1.5vw;
     line-height: 1.6;
-    color: #fae9de; 
+    color: #fae9de;
 }
 
 .writing-description {
@@ -20,16 +21,19 @@
 .writings-list {
     border-top: 1px solid #fae9de;
     padding-top: 2vh;
-    padding-bottom: 2vh; /* Add some padding to the bottom of the writings list */
-    margin: 0 auto; /* Center the list horizontally */
+    padding-bottom: 2vh;
+    margin: 0 auto;
 }
 
 .writing-item {
     margin-bottom: 2vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Set background to black with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 2vw;
     border-radius: 5px;
     transition: background-color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .writing-item:hover {
@@ -50,21 +54,19 @@
     cursor: pointer;
     outline: none;
     margin-right: 1vw;
-    transform: rotate(0deg) scaleY(0.5); /* Initial state: flattened character */
-    display: inline-block;
-    line-height: 1; /* Ensure no extra space around the character */
-    transition: transform 0.5s ease-out; /* Smooth rotation and scaling */
+    transform: rotate(0deg) scaleY(0.5);
+    transition: transform 0.5s ease-out;
 }
 
 .writing-item.expanded .toggle-button {
-    transform: rotate(180deg) scaleY(0.5); /* Pointing upward and flattened when expanded */
+    transform: rotate(180deg) scaleY(0.5);
 }
 
-.piece-title {
+.paper-title {
     font-size: 1.8vw;
     margin: 0;
     text-align: left;
-    flex: 1; /* Ensure the title takes up available space */
+    flex: 1;
     color: #fae9deeb;
 }
 
@@ -89,15 +91,14 @@
     color: #fae9de;
 }
 
-/* Style for Read Translation button */
 .writing-button-translation {
-    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent */
+    background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
     padding: 1vw 2vw;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .writing-description {
@@ -105,14 +106,79 @@
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-    padding-top: 0;
-    padding-bottom: 0;
-    text-align: left;
 }
 
 .writing-item.expanded .writing-description {
-    max-height: 500px; /* Adjust based on your content */
+    max-height: 500px;
     opacity: 1;
     padding-top: 1vh;
     transition: max-height 0.5s ease-in, opacity 0.5s ease-in, padding 0.5s ease-in;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    .writing-title {
+        font-size: 8vw;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    .writing-intro {
+        font-size: 4vw;
+        color: #fae9de;
+        text-align: center;
+        margin-bottom: 4vh;
+    }
+
+    .writing-item {
+        background-color: #2a2a2a;
+        padding: 5vw;
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .paper-title {
+        font-size: 5vw;
+        color: white;
+        margin-bottom: 1vh;
+        text-align: center;
+    }
+
+    .writing-description {
+        font-size: 3vw;
+        padding-top: 0;
+        padding-bottom: 0;
+        color: #fae9de;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    .writing-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2vw;
+        width: 100%;
+    }
+
+    .writing-button {
+        font-size: 3.5vw;
+        padding: 2vw 4vw;
+        background-color: #fae9de;
+        color: #000000;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .writing-button:hover {
+        background-color: #000000;
+        color: #fae9de;
+    }
+}
+
