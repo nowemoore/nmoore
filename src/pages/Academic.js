@@ -78,7 +78,7 @@ const Academic = () => {
             <div className="academic-content">
                 <h1 className="academic-title">My Academic Work</h1>
                 <p className="academic-description">
-                    Here is some of what I've worked on before.
+                Here is some of what I've worked on before. My current work is shifting towards LLM evaluation.
                 </p>
                 <div className="papers-list">
                     {papers.map(paper => (
