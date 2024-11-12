@@ -62,13 +62,7 @@ const Academic = () => {
     // Sort the papers array in descending order by id
     papers.sort((a, b) => b.id - a.id);
 
-    const [expandedPaper, setExpandedPaper] = useState(null);
-
-    const togglePaper = (id) => {
-        setExpandedPaper(expandedPaper === id ? null : id);
-    };
-
-    const isMobile = window.innerWidth <= 767; // Check if screen width is mobile size
+    const [expandedPaper] = useState(null);
 
     return (
         <BackgroundSection backgroundImage="academic.jpg" overlay={true} scrollable={true} customStyles={{
@@ -78,17 +72,17 @@ const Academic = () => {
             <div className="academic-content">
                 <h1 className="academic-title">My Academic Work</h1>
                 <p className="academic-description">
-                Here is some of what I've worked on before. My current work is shifting towards LLM evaluation.
+                    Here is some of what I've worked on before. My current work is shifting towards LLM evaluation.
                 </p>
                 <div className="papers-list">
                     {papers.map(paper => (
                         <div key={paper.id} className={`paper-item ${expandedPaper === paper.id ? 'expanded' : ''}`}>
-                            
-                            {/* Title Section */}
+                             {/* Title Section */}
                             <div className="paper-title-container">
                                 <h2 className="paper-title">{paper.title}</h2>
                             </div>
 
+                            {/* Date Section */}
                             <div className="paper-date">{paper.date}</div>
 
                             {/* Description Section */}
@@ -123,6 +117,8 @@ const Academic = () => {
 };
 
 export default Academic;
+
+
 
 
 
