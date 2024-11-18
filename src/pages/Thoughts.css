@@ -1,31 +1,36 @@
+/* Base Styles (apply to all screens unless overridden by media queries) */
 .thoughts-content {
     text-align: center;
     color: #fae9de;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .thoughts-title {
-    font-size: 4vw;
+    font-size: 5vw; /* Adjusted for better readability */
     margin-bottom: 2vh;
     font-weight: bold;
     color: #fae9de;
-    text-align: center; /* Center the title */
+    text-align: center;
 }
 
 .thoughts-description {
-    font-size: 1.5vw;
+    font-size: 2vw; /* Adjusted for better readability */
     margin-bottom: 4vh;
     line-height: 1.6;
     color: #fae9de;
-    text-align: center; /* Center the text */
+    text-align: center;
 }
 
 .thoughts-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px; /* Reduced gap to make items fit better */
     position: relative;
-    padding-top: 20px; /* Add space between the line and the first list item */
+    padding-top: 20px;
+    overflow-y: auto; /* Enable scrolling */
+    max-height: 60vh; /* Limit the height of the list */
 }
 
 .thoughts-list::before {
@@ -41,13 +46,13 @@
 }
 
 .thought-item {
-    width: 80%;
+    width: 90%; /* Increased width for a more compact design */
     background-color: rgba(250, 233, 222, 0.05);
     border-radius: 10px;
     overflow: hidden;
-    max-height: 15vh; /* Initial height when not expanded */
+    max-height: 20vh; /* Reduced height for better scrolling */
     opacity: 0.8;
-    transition: background-color 0.5s ease, opacity 1s ease, max-height 0.5s ease; /* Combined transitions */
+    transition: background-color 0.5s ease, opacity 1s ease, max-height 0.5s ease;
 }
 
 .thought-item:hover {
@@ -55,14 +60,13 @@
 }
 
 .thought-item.expanded {
-    max-height: 1000px; /* Large enough to cover most content */
+    max-height: 40vh; /* Expand to a reasonable height */
     opacity: 1;
 }
 
 .thought-header {
-    display: block; /* Use flexbox for proper alignment */
-    align-items: center;
-    justify-content: flex-start; /* Align items to start */
+    display: flex;
+    justify-content: space-between;
     padding: 10px 20px;
     cursor: pointer;
 }
@@ -71,17 +75,17 @@
     background: none;
     border: none;
     color: #fae9de;
-    font-size: 2vw;
+    font-size: 2vw; /* Slightly smaller toggle button */
     cursor: pointer;
 }
 
 .thought-title {
-    font-size: 2vw;
+    font-size: 3vw; /* Smaller title font size */
     color: #fae9de;
     text-align: center;
-    flex: 1; /* Ensure the title takes up available space */
+    flex: 1;
     padding-right: 3vw;
-    margin-bottom: 5px; /* Add margin to create space below the title */
+    margin-bottom: 5px;
 }
 
 .thought-content {
@@ -95,14 +99,58 @@
 }
 
 .thought-content-text {
-    font-size: 1.2vw;
+    font-size: 1.5vw; /* Smaller font size for content */
     color: #fae9de;
     line-height: 1.6;
-    text-align: justify; /* Justify the text */
-    hyphens: auto; /* Enable hyphenation */
-    -webkit-hyphens: auto; /* For WebKit browsers */
-    -moz-hyphens: auto; /* For Mozilla browsers */
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
 }
+
+/* Mobile Version (for screens with max-width: 767px) */
+@media (max-width: 767px) {
+    .thoughts-title {
+        font-size: 8vw; /* Increased title font size for mobile */
+        margin-bottom: 4vh;
+    }
+
+    .thoughts-description {
+        font-size: 4vw; /* Increase description size for better readability */
+        margin-bottom: 6vh;
+    }
+
+    .thoughts-list {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .thought-item {
+        width: 100%; /* Make items take the full width */
+        max-height: none; /* Allow for full expansion on mobile */
+    }
+
+    .thought-title {
+        font-size: 5vw; /* Adjust font size for mobile */
+    }
+
+    .thought-content-text {
+        font-size: 4vw; /* Increase text size for better readability */
+        line-height: 1.5;
+    }
+
+    .toggle-button {
+        font-size: 5vw; /* Make the toggle button larger on mobile */
+    }
+
+    .thought-item.expanded {
+        max-height: none;
+        opacity: 1;
+    }
+}
+
+
+
 
 
 
