@@ -42,7 +42,8 @@
 @media (max-width: 768px) {
     .about-me-content {
         max-width: 90%; /* Increase width for smaller screens */
-        padding: 3vw; /* Reduce padding */
+        padding: 2vh; /* Reduce padding */
+        padding-top: 6vh;
     }
 
     .about-me-title {
@@ -52,12 +53,12 @@
 
     .about-me-text {
         font-size: 3.5vw; /* Increase font size for readability */
-        margin-bottom: 5vh; /* Adjust margin */
+        margin-bottom: 3vh; /* Adjust margin */
         text-align: left; /* Text alignment left for readability */
     }
 
     .cv-button {
-        padding: 2vw 5vw; /* Increase padding for buttons */
+        padding: 3vw 5vw; /* Increase padding for buttons */
         font-size: 3.5vw; /* Adjust font size for smaller screens */
     }
 }
