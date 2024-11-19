@@ -44,7 +44,7 @@
 .thought-item {
     position: relative;
     width: 90%;
-    background-color: rgba(250, 233, 222, 0.1); /* Default background color */
+    background-color: rgba(250, 233, 222, 0.05); /* Default background color */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -53,15 +53,15 @@
 
 .thought-item.expanded {
     height: auto; /* Dynamically adjust height based on content */
-    background-color: rgba(250, 233, 222, 0.1); /* Retain default background when expanded */
+    background-color: rgba(250, 233, 222, 0.05); /* Retain default background when expanded */
 }
 
 .thought-item:hover {
-    background-color: rgba(250, 233, 222, 0.15); /* Highlight hovered item */
+    background-color: rgba(250, 233, 222, 0.10); /* Highlight hovered item */
 }
 
 .thought-item.expanded:hover {
-    background-color: rgba(250, 233, 222, 0.15); /* Lighter background only on hover, even when expanded */
+    background-color: rgba(250, 233, 222, 0.10); /* Lighter background only on hover, even when expanded */
 }
 
 .thought-header {
@@ -185,17 +185,17 @@
     .thought-item {
         position: relative;
         width: 100%;
-        background-color: rgba(250, 233, 222, 0.1);
+        background-color: rgba(250, 233, 222, 0.05);
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         overflow: hidden;
         height: 20vh; /* Fixed height for mobile to prevent size changes */
-        transition: all 0.5s ease; /* Smooth transitions */
+        transition: background-color 0.3s ease; /* Smooth transitions */
     }
     
     .thought-item.expanded {
         height: 20vh; /* Retain the same height when expanded */
-        background-color: rgba(250, 233, 222, 0.15); /* Optional: lighter background */
+        background-color: rgba(250, 233, 222, 0.10); /* Optional: lighter background */
     }
 
     /* Title behavior */
