@@ -273,7 +273,7 @@
     }
     
     .thought-content p {
-        font-size: 2vw; /* Larger font size for readability */
+        font-size: 1.9vw; /* Larger font size for readability */
         line-height: 1.8; /* Consistent line spacing */
         margin: 0; /* Prevent layout shifts */
         padding: 2.5vw; /* No padding to interfere with container */
