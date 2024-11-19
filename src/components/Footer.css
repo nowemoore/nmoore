@@ -1,5 +1,5 @@
 .footer {
-  background-color: black;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); /* Gradient fade-out effect */
   color: #fae9de;
   display: flex;
   justify-content: space-between;
@@ -9,9 +9,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2.5vh; /* Adjust height as needed */
+  height: 5vh; /* Slightly taller to emphasize the fade-out */
   z-index: 10;
-  opacity: 0.6;
 }
 
 .footer-left {
@@ -30,7 +29,25 @@
 }
 
 @media (max-width: 768px) {
-  .footer{
+  .footer {
+    display: flex;
+    justify-content: center; /* Center the signature horizontally */
+    align-items: center; 
+  }
+
+  .footer-left {
     display: none;
+  }
+
+  .footer-right {
+    display: flex;
+    justify-content: center; /* Center-align for mobile */
+    align-items: center; 
+    font-size: 0.7rem; /* Adjust font size for smaller devices */
+
+  }
+
+  .footer-signature {
+    height: 2vh; /* Further reduce image size */
   }
 }

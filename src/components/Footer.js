@@ -10,7 +10,7 @@ const Footer = () => {
             </div>
             <div className="footer-right">
                 <img src={signatureImage} alt="Signature" className="footer-signature" />
-                <p>&copy;</p> {/* Adjust location text as needed */}
+                <p>&copy; 2024</p> {/* Adjust location text as needed */}
             </div>
         </footer>
     );
