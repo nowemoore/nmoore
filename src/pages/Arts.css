@@ -76,3 +76,15 @@
     color: #ddd;
     padding: 0 10px;
 }
+
+@media (max-width: 768px) {
+
+    .arts-title {
+        font-size: 7vw;
+    }
+    
+    .arts-description {
+        font-size: 4vw;
+    }
+
+}
