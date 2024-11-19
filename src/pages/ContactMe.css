@@ -6,10 +6,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: 0vh; /* Ensure some space at the top */
+    padding-top: 15vh; /* Ensure some space at the top */
 }
 
 .contact-me-title {
@@ -72,6 +71,10 @@
 
 /* Mobile Adjustments */
 @media (max-width: 767px) {
+    .contact-me-content {
+        padding-top: 5vh;
+    }
+    
     .contact-me-title {
         font-size: 8vw;
         margin-bottom: 2vh;
@@ -100,6 +103,7 @@
         transform: scale(1);
         opacity: 0.7;
     }
+
 }
 
 
