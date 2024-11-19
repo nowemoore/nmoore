@@ -137,6 +137,7 @@
         color: #fae9de; /* Make sure the text is light */
         text-align: center; /* Center the description */
         margin-bottom: 4vh;
+        padding: 0 5vw;
     }
 
     .academic-title::after {

@@ -7,6 +7,7 @@ const AboutMe = () => {
     return (
 <BackgroundSection
     backgroundImage="aboutme.jpg"
+    backgroundImageM="mecam.jpg"
     overlay={true}
     scrollable={false}
     customStyles={{
