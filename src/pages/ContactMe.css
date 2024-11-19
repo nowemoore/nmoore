@@ -74,16 +74,16 @@
 @media (max-width: 767px) {
     .contact-me-title {
         font-size: 8vw;
-        margin-bottom: 4vh;
+        margin-bottom: 2vh;
     }
 
     .contact-me-description {
         font-size: 4vw;
-        margin-bottom: 6vh;
+        margin-bottom: 2vh;
     }
 
     .social-links {
-        gap: 30px; /* Adjust gap for mobile */
+        gap: 10vw; /* Adjust gap for mobile */
         justify-content: center; /* Ensure icons are centered */
     }
 
@@ -94,6 +94,11 @@
 
     .social-link span {
         font-size: 4vw; /* Adjust font size for mobile */
+    }
+
+    .social-link:hover {
+        transform: scale(1);
+        opacity: 0.7;
     }
 }
 
