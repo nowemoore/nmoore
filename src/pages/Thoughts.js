@@ -28,7 +28,13 @@ const Thoughts = () => {
             id: 5,
             title: "The Trusting Mind",
             content: "AI lives in a world different from us and only learns about human means by overhearing us talk about our experiences. She cannot immediately distinguish a reliable source from an unreliable one—she cannot afford to. Her entire reality relies on the narratives of the world around us that we choose to present, seizing any potentially helpful piece of information she can get her hands on. AI is a mighty yet naïve learner with one unpredictable quality: access to entire lifetimes worth of data to contextualise what she's observing."
-        }
+        },
+ {
+    id: 6,
+    title: "Generation Invincible",
+    content: "We live an age of scaling. That is, until some bright mind out there discovers yet another miracle of ML comparable to the attention mechanism, we are left with making our models ever larger to make them noticeably better. Today's LLMs are some of the most fascinating——but also some of the most hazardous things on earth. Funnily enough, both these attributes come from the same root: LLMs are both charming and dangerous because they talk to us. They speak our language but hide great secrets within their hundreds of layers, warranting the question: are we equipped to talk to them?"
+
+}
     ];
 
     // Sort the thoughts array in descending order by id
