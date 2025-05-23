@@ -9,6 +9,8 @@ import negabs from '../assets/docs/neg_abs.pdf';
 import negpost from '../assets/docs/neg_post.pdf';
 import ergpaper from '../assets/docs/erg_paper.pdf';
 import ptpaper from '../assets/docs/pt_paper.pdf';
+import mathesis from '../assets/docs/mathesis.pdf';
+import sycproject from '../assets/docs/syc.pdf';
 
 const Academic = () => {
     const papers = [
@@ -57,6 +59,25 @@ const Academic = () => {
             abstractLink: null,
             date: "June 2024" 
         },
+        {
+            id: 6,
+            title: "Not Everything is Up for Debate",
+            description: "A pilot project exploring the effects of representation of certain conversation topics in training data on the levels of sycophancy (flattering) behaviour in LLMs.",
+            readLink: sycproject,
+            posterLink: null, 
+            abstractLink: null,
+            date: "May 2025" 
+        },
+
+        {
+            id: 7,
+            title: "Hedging Our Bets on LLMs: Challenges in Calibrating the Language of Uncertainty",
+            description: "A HCI-focused thesis exploring how humans perceive linguistic expressions of uncertainty in contexts with different stakes and how LLMs calibrate for these preferences.",
+            readLink: mathesis,
+            posterLink: null, 
+            abstractLink: null,
+            date: "May 2025" 
+        },
     ];
 
     // Sort the papers array in descending order by id
@@ -72,7 +93,7 @@ const Academic = () => {
             <div className="academic-content">
                 <h1 className="academic-title">My Academic Work</h1>
                 <p className="academic-description">
-                    Here is some of what I've worked on before. My current work is shifting towards LLM evaluation.
+                    My current work focuses on LLM evaluation and human-computer interaction. I have previously worked 
                 </p>
                 <div className="papers-list">
                     {papers.map(paper => (

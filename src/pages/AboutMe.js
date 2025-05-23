@@ -21,7 +21,7 @@ const AboutMe = () => {
             <div className="about-me-content">
                 <h1 className="about-me-title">Something about me.</h1>
                 <p className="about-me-text">
-                    I'm an MA student in the Department of Linguistics at the University of Pennsylvania. I'm interested in linguistic agency and what it can tell us about how minds, both human and artificial, understand each other's actions. I also spend a lot of time thinking about resource allocation, AI-related x-risks, human-computer (or computer-human) interaction, and policy. My favourite case is ergative and I really dislike pasta.
+                I'm a recent graduate from Penn with an MA in Linguistics, BA in Linguistics and Cognitive Science, and a minor in Computer Science. I'm interested in how language output can tell us about how minds, both human and artificial, understand each other and the world. I also spend a lot of time thinking about resource allocation, AI-related x-risks, human-computer (or computer-human) interaction, and policy. My favourite case is ergative and I really dislike pasta.
                 </p>
                 <a href={cvPDF} className="cv-button" target="_blank" rel="noopener noreferrer">
                     View CV
