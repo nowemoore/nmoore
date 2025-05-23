@@ -93,7 +93,7 @@ const Academic = () => {
             <div className="academic-content">
                 <h1 className="academic-title">My Academic Work</h1>
                 <p className="academic-description">
-                    My current work focuses on LLM evaluation and human-computer interaction. I have previously worked 
+                    My current work focuses on LLM evaluation and human-computer interaction. I have previously worked on some theoretical and experimental linguistics projects too.
                 </p>
                 <div className="papers-list">
                     {papers.map(paper => (
