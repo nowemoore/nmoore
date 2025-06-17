@@ -3,9 +3,10 @@ import BackgroundSection from '../components/BackgroundSection';
 import './ContactMe.css';
 import FacebookIcon from '../assets/images/facebook-icon.jpg';
 import InstagramIcon from '../assets/images/insta-icon.jpg';
-import LinkedInIcon from '../assets/images/linkedin-icon.png'; // Ensure this path is correct
-import EmailIcon from '../assets/images/gmail-icon.jpg'; // Ensure this path is correct
-import FeedbackIcon from '../assets/images/feedback-icon.png'; // Ensure this path is correct
+import LinkedInIcon from '../assets/images/linkedin-icon.png'; 
+import EmailIcon from '../assets/images/gmail-icon.jpg';
+import FeedbackIcon from '../assets/images/feedback-icon.png'; 
+import GitIcon from '../assets/images/git-icon.png'; 
 
 const ContactMe = () => {
     return (
@@ -20,6 +21,10 @@ const ContactMe = () => {
                 </p>
 
                 <div className="social-links">
+                    <a href="https://github.com/nowemoore" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <img src={GitIcon} alt="GitHub" />
+                        <span>GitHub</span>
+                    </a>
                     <a href="https://www.facebook.com/nika.datkova/" target="_blank" rel="noopener noreferrer" className="social-link">
                         <img src={FacebookIcon} alt="Facebook" />
                         <span>Facebook</span>
@@ -28,11 +33,11 @@ const ContactMe = () => {
                         <img src={InstagramIcon} alt="Instagram" />
                         <span>Instagram</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/nikola-moore-22748220b/" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://www.linkedin.com/in/nowemoore/" target="_blank" rel="noopener noreferrer" className="social-link">
                         <img src={LinkedInIcon} alt="LinkedIn" />
                         <span>LinkedIn</span>
                     </a>
-                    <a href="mailto:ndatkova@sas.upenn.edu" className="social-link">
+                    <a href="mailto:nowe.moore@gmail.com" className="social-link">
                         <img src={EmailIcon} alt="Email" />
                         <span>Email</span>
                     </a>
