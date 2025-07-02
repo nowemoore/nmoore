@@ -42,7 +42,6 @@
   transition: opacity 1.5s ease-in-out;
 }
 
-/* Add scroll if content is scrollable */
 .background-content.scrollable {
   overflow-y: auto;
 }
@@ -56,7 +55,7 @@
   }
 
   .background-content {
-    width: 90%; /* Make content width smaller on mobile */
+    width: 100%; /* Make content width smaller on mobile */
     padding-left: 2vw;
     padding-right: 2vw;
   }

@@ -11,17 +11,20 @@ const AboutMe = () => {
     overlay={true}
     scrollable={false}
     customStyles={{
-        width: '90%',  // Custom width
+        width: '90%', 
         textAlign: 'left',
-        display: 'flex',  // Ensures Flexbox layout is applied
-        justifyContent: 'flex-start',  // Align content to the top (vertical alignment)
+        display: 'flex',
+        justifyContent: 'flex-start', 
         alignItems: 'flex-start',
     }}
     customClass="custom-aboutme-layout">
             <div className="about-me-content">
                 <h1 className="about-me-title">Something about me.</h1>
                 <p className="about-me-text">
-                I'm a recent graduate from Penn with an MA in Linguistics, BA in Linguistics and Cognitive Science, and a minor in Computer Science. I'm interested in how language output can tell us about how minds, both human and artificial, understand each other and the world. I also spend a lot of time thinking about resource allocation, AI-related x-risks, human-computer (or computer-human) interaction, and policy. My favourite case is ergative and I really dislike pasta.
+                A lot of what I do stems from my general aim to make sure that we're building algorithm-mediated societies that are <b>smart</b>, <b>secure</b>, and <b>built for humans</b>. 
+                I'm specifically invested in how AI systems can contribute toward (as well as jeopardise) this cause.
+                My blended background in <b>language</b>, <b>cognition</b>, and <b>computer sciences</b> inspires my inquiry in how the mind&mdash;human or artificial&mdash;uses language as a medium to facilitate thought, intentions, decision-making, and human-computer interaction.
+                I believe more answers to questions in this domain are necessary for a more sustainable progress.
                 </p>
                 <a href={cvPDF} className="cv-button" target="_blank" rel="noopener noreferrer">
                     View CV

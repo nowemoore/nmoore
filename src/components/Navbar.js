@@ -33,6 +33,11 @@ const Navbar = () => {
             </Link>
         </li>
         <li>
+            <Link to="/projects" onClick={toggleSidebar}>
+                <i className="fas fa-graduation-cap"></i> Projects
+            </Link>
+        </li>
+        <li>
             <Link to="/academic" onClick={toggleSidebar}>
                 <i className="fas fa-graduation-cap"></i> Academic
             </Link>
@@ -66,8 +71,7 @@ const Navbar = () => {
                 <ul className="navbar-links">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About Me</Link></li>
-                    <li><Link to="/academic">Academic</Link></li>
-                    <li><Link to="/writing">Writing</Link></li>
+                    <li><Link to="/projects">Projects</Link></li>
                     <li><Link to="/arts">Arts</Link></li>
                     <li><Link to="/thoughts">Thoughts</Link></li>
                     <li><Link to="/contact">Contact Me</Link></li>

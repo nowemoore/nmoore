@@ -1,0 +1,356 @@
+.text-page-content {
+    max-width: 70%;
+    margin: 0 auto;
+    padding-bottom: 4vw;
+}
+
+.text-page-nav {
+    margin-bottom: 4vh;
+}
+
+.back-button {
+    background-color: rgba(250, 233, 222, 0.7);
+    color: #000;
+    padding: 1.2vh 2.5vw;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1vw;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5vw;
+    border: 2px solid rgba(250, 233, 222, 0.3);
+}
+
+.back-button::before {
+    content: "‹";
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: rgba(250, 233, 222, 1);
+}
+
+.text-page-header {
+    text-align: center;
+    margin-bottom: 4vh;
+    border-bottom: 1px solid rgba(250, 233, 222, 0.2);
+    padding-bottom: 3vh;
+}
+
+.text-page-chips {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin-bottom: 2vh;
+    flex-wrap: wrap;
+}
+
+.text-chip {
+    font-size: 0.9vw;
+    padding: 0.5vw 1vw;
+    border-radius: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.chip-academic {
+    background-color: #9d0051;
+    color: #fff;
+}
+
+.chip-personal {
+    background-color: #bffcf9;
+    color: #000;
+}
+
+.chip-art {
+    background-color: #47817e;
+    color: #fff;
+}
+
+.chip-code {
+    background-color: #009897;
+    color: #fff;
+}
+
+.chip-tool {
+    background-color: #bda5ab;
+    color: #fff;
+}
+
+.text-page-title {
+    font-size: 3.5vw;
+    color: #fae9de;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.text-page-date {
+    font-size: 1.2vw;
+    color: rgba(250, 233, 222, 0.7);
+    margin-top: 1vh;
+}
+
+
+.text-page-body {
+    padding-bottom: 3vh;
+    line-height: 1.8;
+}
+
+.text-page-body p {
+    font-size: 1.1vw;
+    color: #fae9de;
+    margin-bottom: 2vh;
+    text-align: justify;
+}
+
+.section-header {
+    background-color: #fae9dedf;
+    color: #1a1a1a;
+    padding: 1vh 1vw;
+    font-weight: bold;
+    text-align: left;
+    padding: 1vh 1vw;
+    margin: 0 -1vw;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+.section-header h2,
+.section-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: inherit;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.text-page-body h2 {
+    font-size: 1.8vw;
+    color: #fae9de;
+    margin: 4vh 0 2vh 0;
+    border-bottom: 1px solid rgba(250, 233, 222, 0.2);
+    padding-bottom: 1vh;
+}
+
+.text-page-body h3 {
+    font-size: 1.4vw;
+    color: #fae9de;
+    margin: 3vh 0 1.5vh 0;
+}
+
+.text-page-body blockquote {
+    border-left: 3px solid #fae9de;
+    padding-left: 2vw;
+    margin: 2vh 0;
+    font-style: italic;
+    color: rgba(250, 233, 222, 0.8);
+}
+
+.text-page-body .song {
+    text-align: center;
+    font-style: normal;
+    color: #fae9de;
+    font-size: 1.2vw;
+    margin: 3vh auto;
+    max-width: 70%;
+    line-height: 1.6;
+    padding-bottom: 2vh;
+}
+
+.text-page-body .song-text::before {
+    content: "\201C";
+    font-size: 1.5em;
+    color: rgba(250, 233, 222, 0.6);
+}
+
+.text-page-body .song-text::after {
+    content: "\201D";
+    font-size: 1.5em;
+    color: rgba(250, 233, 222, 0.6);
+}
+
+.text-page-body .song-author {
+    display: block;
+    margin-top: 1vh;
+    font-size: 0.9vw;
+    color: rgba(250, 233, 222, 0.7);
+}
+
+.text-page-body .song-author::before {
+    content: "\2014  ";
+}
+
+.text-page-body ul, .text-page-body ol {
+    padding-left: 2vw;
+    margin-bottom: 2vh;
+}
+
+.text-page-body li {
+    font-size: 1.1vw;
+    color: #fae9de;
+    margin-bottom: 0.5vh;
+}
+
+.text-page-body .box {
+    background-color: white;
+    color: black;
+    padding: 2vh 2vw;
+    margin: 3vh 0;
+    border-radius: 8px;
+    font-size: 1.1vw;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-page-body .box strong {
+    font-weight: bold;
+}
+
+.footnote-ref {
+    color: #fae9de;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: color 0.3s ease;
+}
+
+.footnote-ref:hover {
+    color: rgba(250, 233, 222, 0.7);
+}
+
+.footnotes {
+    margin-top: 6vh;
+    padding-top: 3vh;
+    border-top: 1px solid rgba(250, 233, 222, 0.2);
+}
+
+.footnotes h3 {
+    font-size: 1.4vw;
+    color: #fae9de;
+    text-align: left;
+    margin-bottom: 2vh;
+}
+
+.footnote {
+    margin-bottom: 1.5vh;
+    font-size: 0.95vw;
+    color: rgba(250, 233, 222, 0.8);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.footnote-number {
+    color: #fae9de;
+    margin-right: 0.5vw;
+}
+
+.footnote-back {
+    color: rgba(250, 233, 222, 0.6);
+    text-decoration: none;
+    margin-left: 0.5vw;
+    font-size: inherit;
+    vertical-align: baseline;
+}
+
+.footnote-back:hover {
+    color: #fae9de;
+}
+
+.spacer {
+    height: 4vh;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+    .text-page-content {
+        padding: 0 6vw;
+    }
+
+    .back-button {
+        font-size: 3.5vw;
+        padding: 2vh 5vw;
+        border-radius: 20px;
+    }
+
+    .back-button::before {
+        font-size: 1.2em;
+    }
+
+    .text-page-header {
+        margin-bottom: 4vh;
+    }
+
+    .text-page-chips {
+        gap: 2vw;
+        margin-bottom: 3vh;
+    }
+
+    .text-chip {
+        font-size: 3vw;
+        padding: 1.5vw 3vw;
+    }
+
+    .text-page-title {
+        font-size: 7vw;
+        margin-bottom: 2vh;
+    }
+
+    .text-page-date {
+        font-size: 3.5vw;
+        margin-top: 1vh;
+    }
+
+    .text-page-body {
+        padding: 4vh 0;
+    }
+
+    .text-page-body p {
+        font-size: 4vw;
+        margin-bottom: 3vh;
+        text-align: left;
+    }
+
+    .text-page-body h2 {
+        font-size: 6vw;
+        margin: 5vh 0 3vh 0;
+    }
+
+    .text-page-body h3 {
+        font-size: 5vw;
+        margin: 4vh 0 2vh 0;
+    }
+
+    .text-page-body li {
+        font-size: 4vw;
+        margin-bottom: 1vh;
+    }
+
+    .section-header {
+        font-size: 5vw;
+        padding: 3vh 4vw;
+        margin: 5vh 0 3vh 0;
+        border-radius: 6px;
+    }
+
+    .text-page-body .song {
+        font-size: 4.5vw;
+        max-width: 90%;
+        margin: 4vh auto;
+    }
+
+    .text-page-body .song-author {
+        font-size: 3.5vw;
+        margin-top: 2vh;
+    }
+
+    .text-page-body .box {
+        padding: 3vh 4vw;
+        margin: 4vh 0;
+        font-size: 4vw;
+        border-radius: 6px;
+    }
+}

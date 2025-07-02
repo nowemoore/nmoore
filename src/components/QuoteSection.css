@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 30vh; /* Adjusted to fit within the background image */
+    height: 40vh; /* Adjusted to fit within the background image */
     width: 100%;
     color: #fae9de;
     opacity: 0.9;
@@ -20,7 +20,7 @@
 }
 
 .quote-mark {
-    font-size: 60vw; /* Large size for the quotation marks */
+    font-size: 40vw; /* Large size for the quotation marks */
     position: absolute;
     opacity: 0.15; /* Slightly more visible opacity */
     font-family: 'Georgia', serif; /* Use a serif font for the quotation marks */

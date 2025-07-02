@@ -10,13 +10,13 @@
 }
 
 .about-me-title {
-    font-size: 4vw; /* Responsive font size */
+    font-size: 4vw; 
     margin-bottom: 2vh;
     font-weight: bold;
 }
 
 .about-me-text {
-    font-size: 1.5vw; /* Responsive font size */
+    font-size: 1.3vw;
     line-height: 1.6;
     margin-bottom: 7vh;
 }
@@ -25,8 +25,8 @@
     display: inline-block;
     background-color: #fae9de;
     color:black;
-    padding: 1.5vw 3vw;
-    border-radius: 5px;
+    padding: 1.2vw 3vw;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;

@@ -1,10 +1,5 @@
-/* Prevent horizontal scroll on small screens */
 body {
     overflow-x: hidden;
-}
-
-.no-scroll {
-    overflow: hidden; /* Prevents vertical scrolling */
 }
 
 .center-container {
@@ -12,76 +7,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    margin-top: 10vh;
     text-align: center;
-    max-width: 100%; /* Ensure the container doesn't exceed the viewport width */
+    max-width: 100%;
     box-sizing: border-box;
-}
-
-.title-container {
     position: relative;
-    text-align: center;
-    display: inline-block;
-    width: 100%; /* Full width for proper text alignment */
+    z-index: 10;
 }
 
-.overlay-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 3;
+/* Smaller quote text - only adjust size, keep existing font */
+.center-container .quote-section .quote-text {
+    font-size: 2.5rem !important;
 }
 
-.typewriter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%; /* Ensure full width for responsiveness */
-    margin-top: -10vh;
-    padding: 10px; /* Add padding to prevent text from getting cut off */
-    overflow-y: auto; /* Allow content to scroll vertically if it overflows */
-}
-
-.typewriter-text {
-    font-size: 2vw; /* Responsive font size */
-    max-width: 60%; /* Limits the width to 60% of the screen */
-    margin: 0 auto;
-    line-height: 1.5;
-    white-space: pre-wrap; /* Ensures that text wraps correctly */
-    color: #fae9de;
-    opacity: 0.8;
-    overflow-wrap: break-word; /* Prevent long words from causing overflow */
-    word-wrap: break-word;
-    box-sizing: border-box;
-    padding-bottom: 10px; /* Add padding to ensure full visibility */
-    padding-top: 5vh;
-}
-
-/* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
-  
-    .center-container, .typewriter-text {
-        max-width: 90%; /* Adjust width on smaller screens */
+    .center-container {
+        max-width: 90%;
     }
-
-    .typewriter-text {
-        font-size: 4vw; /* Increase font size for readability on small screens */
-    }
-
-    .typewriter-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%; /* Ensure full width for responsiveness */
-        margin-top: -30vh;
-        padding: 10px; /* Add padding to prevent text from getting cut off */
-        overflow-y: auto; /* Allow content to scroll vertically if it overflows */
+    
+    .center-container .quote-section .quote-text {
+        font-size: 1.8rem !important;
     }
 }
