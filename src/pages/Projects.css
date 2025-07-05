@@ -279,15 +279,7 @@
 
 .project-button:hover {
     background-color: rgba(250, 233, 222, 1);
-    transform: translateY(-2px);
-}
-
-.project-button.translation {
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-.project-button.translation:hover {
-    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
