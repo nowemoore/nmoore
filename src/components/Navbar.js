@@ -38,16 +38,6 @@ const Navbar = () => {
             </Link>
         </li>
         <li>
-            <Link to="/academic" onClick={toggleSidebar}>
-                <i className="fas fa-graduation-cap"></i> Academic
-            </Link>
-        </li>
-        <li>
-            <Link to="/writing" onClick={toggleSidebar}>
-                <i className="fas fa-pen"></i> Writing
-            </Link>
-        </li>
-        <li>
             <Link to="/arts" onClick={toggleSidebar}>
                 <i className="fas fa-palette"></i> Arts
             </Link>

@@ -166,9 +166,9 @@ const Projects = () => {
     useEffect(() => {
         const updateColumnCount = () => {
             const width = window.innerWidth;
-            if (width <= 767) {
+            if (width <= 600) {
                 setColumnCount(1);
-            } else if (width <= 1024) {
+            } else if (width <= 900) {
                 setColumnCount(2);
             } else {
                 setColumnCount(3);
@@ -180,7 +180,7 @@ const Projects = () => {
         return () => window.removeEventListener('resize', updateColumnCount);
     }, []);
 
-    // Sort by date
+    // Sort by date (newest first)
     const sortedProjects = [...projects].sort((a, b) => {
         const dateA = new Date(a.date);
         const dateB = new Date(b.date);
@@ -197,18 +197,17 @@ const Projects = () => {
     // Distribute projects into columns for masonry layout
     const distributeProjects = (projects, columnCount) => {
         const columns = Array.from({ length: columnCount }, () => []);
-        const columnHeights = Array(columnCount).fill(0);
-
-        projects.forEach((project) => {
-            // Find the column with the smallest height
-            const shortestColumnIndex = columnHeights.indexOf(Math.min(...columnHeights));
-            columns[shortestColumnIndex].push(project);
-            
-            // Estimate height for better distribution
-            // Base height + variable content height
-            const estimatedHeight = 300 + (project.description.length * 0.5) + (project.chips.length * 20);
-            columnHeights[shortestColumnIndex] += estimatedHeight;
-        });
+        
+        if (columnCount === 1) {
+            // For mobile, just use the sorted order directly
+            columns[0] = projects;
+        } else {
+            // For desktop/tablet, distribute evenly while maintaining chronological order
+            projects.forEach((project, index) => {
+                const columnIndex = index % columnCount;
+                columns[columnIndex].push(project);
+            });
+        }
 
         return columns;
     };
@@ -295,7 +294,6 @@ const Projects = () => {
             backgroundImage="academic.jpg" 
             overlay={true} 
             scrollable={true} 
-            customStyles={{ paddingBottom: '15vh' }}
             customClass="custom-projects-layout"
         >
             <div className="projects-content">
@@ -322,9 +320,8 @@ const Projects = () => {
                     {projectColumns.map((column, columnIndex) => (
                         <div key={columnIndex} className="masonry-column">
                             {column.map((project, projectIndex) => {
-                                // Calculate global index for alternating pattern
-                                const globalIndex = filteredProjects.findIndex(p => p.id === project.id);
-                                return renderProjectCard(project, globalIndex);
+                                // Use projectIndex within the column for consistent styling
+                                return renderProjectCard(project, projectIndex);
                             })}
                         </div>
                     ))}
