@@ -290,7 +290,7 @@
 /* Tablet styles - Only for actual tablets/smaller screens */
 @media (max-width: 900px) and (min-width: 601px) {
     .projects-content { 
-        padding: 0 3vw; 
+        padding: 0; 
     }
     .projects-title { 
         font-size: clamp(2rem, 6vw, 3rem); 
@@ -339,9 +339,9 @@
 
 /* Mobile styles - Only for actual mobile devices */
 @media (max-width: 600px) {
-    .projects-content { 
-        padding: 0 1rem; 
-    }
+    /* .projects-content { 
+        padding: 0; 
+    } */
     .projects-title { 
         font-size: 2rem; 
         margin-bottom: 1rem; 
@@ -357,10 +357,10 @@
         margin-bottom: 1.5rem; 
     }
     .filter-chip { 
-        padding: 0.25rem 1.5rem; 
+        padding: 0.2rem 1.5rem; 
         font-size: 0.875rem; 
         border-radius: 1.25rem;
-        min-height: 2.75rem;
+        min-height: 2rem;
         min-width: 2.75rem;
         display: flex;
         align-items: center;

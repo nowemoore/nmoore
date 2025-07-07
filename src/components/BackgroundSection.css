@@ -10,7 +10,12 @@
   top: 0;
   left: 0;
   z-index: -1;
+  opacity: 0;
   transition: opacity 1.5s ease-in-out;
+}
+
+.background-section.visible {
+  opacity: 1;
 }
 
 .background-overlay {
@@ -28,36 +33,159 @@
   z-index: 2;
   height: 100%;
   box-sizing: border-box;
-  width: 70%; /* Default width, override with props */
+  width: clamp(85%, 90%, 95%);
   margin: 0 auto;
-  padding-left: 5vw; /* Custom side padding */
-  padding-right: 5vw; /* Custom side padding */
-  padding-bottom: 0; /* Default bottom padding is 0, you can adjust if needed */
+  padding: clamp(15vh, 20vh, 25vh) clamp(2vw, 5vw, 8vw) 0;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  text-align: center; /* Center text if needed */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   opacity: 1;
   transition: opacity 1.5s ease-in-out;
+  overflow-y: hidden;
 }
 
 .background-content.scrollable {
   overflow-y: auto;
+  justify-content: flex-start;
+  padding-top: clamp(10vh, 15vh, 20vh);
 }
 
-@media (max-width: 768px) {
+/* Custom Projects Layout - Responsive */
+.background-content.custom-projects-layout {
+  width: clamp(80%, 85%, 90%) !important;
+  padding: clamp(10vh, 15vh, 20vh) clamp(1rem, 3vw, 2rem) clamp(5vh, 10vh, 15vh) !important;
+  max-width: 1200px !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+}
+
+/* Custom Academic Layout - Responsive */
+.background-content.custom-academic-layout {
+  width: clamp(80%, 85%, 90%) !important;
+  padding: clamp(15vh, 20vh, 25vh) clamp(1rem, 3vw, 2rem) clamp(5vh, 10vh, 15vh) !important;
+  max-width: 1200px !important;
+}
+
+/* Custom Writing Layout - Responsive */
+.background-content.custom-writing-layout {
+  width: clamp(80%, 85%, 90%) !important;
+  padding: clamp(15vh, 20vh, 25vh) clamp(1rem, 3vw, 2rem) clamp(5vh, 10vh, 15vh) !important;
+  max-width: 1200px !important;
+}
+
+/* Desktop styles - Large screens */
+@media (min-width: 1201px) {
+  .background-content {
+    width: 70%;
+    padding: 20vh 5vw 0;
+  }
+  
+  .background-content.custom-projects-layout {
+    width: 75% !important;
+    padding: 15vh 2.5rem 10vh !important;
+  }
+  
+  .background-content.custom-academic-layout,
+  .background-content.custom-writing-layout {
+    width: 70% !important;
+    padding: 20vh 2.5rem 10vh !important;
+  }
+}
+
+/* Laptop/Desktop styles */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .background-content {
+    width: 75%;
+    padding: 18vh 4vw 0;
+  }
+  
+  .background-content.custom-projects-layout {
+    width: 80% !important;
+    padding: 15vh 2rem 8vh !important;
+  }
+  
+  .background-content.custom-academic-layout,
+  .background-content.custom-writing-layout {
+    width: 75% !important;
+    padding: 18vh 2rem 8vh !important;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 900px) {
+  .background-content {
+    width: 85%;
+    padding: 15vh 5vw 0;
+  }
+  
+  .background-content.custom-projects-layout {
+    width: 90% !important;
+    padding: 12vh 1.5rem 6vh !important;
+  }
+  
+  .background-content.custom-academic-layout,
+  .background-content.custom-writing-layout {
+    width: 85% !important;
+    padding: 15vh 1.5rem 6vh !important;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
   .background-section {
-    background-attachment: scroll; /* Disable fixed background on mobile */
+    background-attachment: scroll;
     background-size: cover;
     height: 100vh;
     width: 100vw;
   }
 
   .background-content {
-    width: 100%; /* Make content width smaller on mobile */
-    padding-left: 2vw;
-    padding-right: 2vw;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .background-content.custom-projects-layout,   
+  .background-content.custom-academic-layout,
+  .background-content.custom-writing-layout {
+    width: 100% !important;
+    padding: 10vh 4rem 5vh !important;
+  }
+  
+  .background-content.scrollable {
+    padding-top: 10vh;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .background-content {
+    padding: 8vh 0.75rem 0;
+  }
+  
+  .background-content.custom-projects-layout,
+  .background-content.custom-academic-layout,
+  .background-content.custom-writing-layout {
+    padding: 12vh 0.75rem!important;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .background-content {
+    padding: 5vh 1rem 0;
+    justify-content: flex-start;
+  }
+  
+  .background-content.custom-projects-layout,
+  .background-content.custom-academic-layout,
+  .background-content.custom-writing-layout {
+    padding: 3vh 1rem 2vh !important;
+  }
+  
+  .background-content.scrollable {
+    padding-top: 3vh;
   }
 }
 
