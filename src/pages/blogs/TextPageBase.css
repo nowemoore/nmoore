@@ -82,9 +82,9 @@
 }
 
 .text-page-title {
-    font-size: 3.5vw;
+    font-size: 2.5rem;
     color: #fae9de;
-    margin: 0;
+    margin: 0 -5rem;
     font-weight: bold;
     line-height: 1.2;
 }
@@ -267,12 +267,12 @@
 /* Mobile Responsive */
 @media (max-width: 767px) {
     .text-page-content {
-        padding: 0 6vw;
+        max-width: 90%;
     }
 
     .back-button {
         font-size: 3.5vw;
-        padding: 2vh 5vw;
+        padding: 1vh 5vw;
         border-radius: 20px;
     }
 
@@ -281,7 +281,7 @@
     }
 
     .text-page-header {
-        margin-bottom: 4vh;
+        margin: 0 4vh;
     }
 
     .text-page-chips {
@@ -296,7 +296,7 @@
 
     .text-page-title {
         font-size: 7vw;
-        margin-bottom: 2vh;
+        padding: 2vw 7vw;
     }
 
     .text-page-date {
@@ -305,13 +305,12 @@
     }
 
     .text-page-body {
-        padding: 4vh 0;
+        padding: 0 0;
     }
 
     .text-page-body p {
         font-size: 4vw;
         margin-bottom: 3vh;
-        text-align: left;
     }
 
     .text-page-body h2 {
@@ -331,9 +330,7 @@
 
     .section-header {
         font-size: 5vw;
-        padding: 3vh 4vw;
         margin: 5vh 0 3vh 0;
-        border-radius: 6px;
     }
 
     .text-page-body .song {
@@ -353,4 +350,23 @@
         font-size: 4vw;
         border-radius: 6px;
     }
+
+    .footnotes {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.footnotes h3 {
+    font-size: 3vh;
+    margin-bottom: 0;
+}
+
+.footnote {
+    margin-bottom: 1.5vh;
+    font-size: 0.95rem;
+    color: rgba(250, 233, 222, 0.8);
+    line-height: 1.6;
+    text-align: left;
+}
+
 }

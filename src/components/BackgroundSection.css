@@ -161,7 +161,7 @@
 /* Very small mobile devices */
 @media (max-width: 480px) {
   .background-content {
-    padding: 8vh 0.75rem 0;
+    padding: 8vh 0.75rem;
   }
   
   .background-content.custom-projects-layout,
