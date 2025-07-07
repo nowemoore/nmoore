@@ -350,13 +350,14 @@
         font-size: 1rem; 
         margin-bottom: 1.5rem; 
         padding: 0 0.5rem; 
+        text-align: center;
     }
     .filter-chips { 
         gap: 0.5rem; 
         margin-bottom: 1.5rem; 
     }
     .filter-chip { 
-        padding: 0.75rem 1rem; 
+        padding: 0.25rem 1.5rem; 
         font-size: 0.875rem; 
         border-radius: 1.25rem;
         min-height: 2.75rem;
@@ -418,10 +419,10 @@
         justify-content: flex-start; 
     }
     .project-button { 
-        padding: 0.75rem 1rem; 
+        padding: 0.75rem 1rem;
+        min-width: 3rem; 
         font-size: 0.875rem; 
         border-radius: 0.5rem;
-        min-height: 2.75rem;
         display: flex;
         align-items: center;
         justify-content: center;
