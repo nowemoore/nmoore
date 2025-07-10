@@ -1,36 +1,38 @@
-/* AboutMe.css */
-
 .about-me-content {
-    background-color: transparent; /* Background color is managed by the overlay */
-    padding: 4vw;
+    background-color: transparent;
     border-radius: 10px;
-    max-width: 60%;
     padding-top: 0;
     color: #fae9de;
+
 }
 
 .about-me-title {
     font-size: 4vw; 
     margin-bottom: 2vh;
     font-weight: bold;
+    text-align: left;
 }
 
 .about-me-text {
     font-size: 1.3vw;
+    text-align: left;
     line-height: 1.6;
     margin-bottom: 7vh;
 }
 
 .cv-button {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fae9de;
     color:black;
+    max-width: 12%;
     padding: 1.2vw 3vw;
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
-    font-size: 1.5vw; /* Responsive font size */
+    font-size: 1.5vw;
     opacity: 0.7;
 }
 

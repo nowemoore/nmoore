@@ -8,11 +8,11 @@
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 15vh; /* Ensure some space at the top */
+    padding-top: 5vh; /* Ensure some space at the top */
 }
 
 .contact-me-title {
-    padding: 10vh 0 0;
+    padding: 0 0;
     font-size: 4vw;
     margin-bottom: 2vh;
     font-weight: bold;
