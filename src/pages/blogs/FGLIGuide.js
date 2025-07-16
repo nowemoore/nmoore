@@ -4,7 +4,7 @@ import TextPageBase from './TextPageBase';
 const FGLIGuide = () => {
     return (
         <TextPageBase
-            title="An Unnecessarily Practical Guide to Thriving in the Ivy League as a FGLI Student"
+            title="An Unnecessarily Practical Guide to Thriving in the Top Universities as a FGLI Student"
             date="July 2025"
             chips={["tool", "academic"]}
             backgroundImage="library.jpg"
