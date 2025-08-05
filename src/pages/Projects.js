@@ -164,7 +164,7 @@ const Projects = () => {
         {
             id: 12,
             title: "Fight Classy",
-            description: "How I applied my degree in the Dark Arts to become a more likeable person to argue with.",
+            description: "How I applied my degree in the Dark Arts to (hopefully) become a more likeable person to argue with.",
             thumbnail: suit,
             readMoreLink: "/onfighting",
             chips: ["tool", "personal"],
