@@ -118,6 +118,16 @@
     line-height: 1.7;
 }
 
+.text-page-body a {
+    color: #ba15ae;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-page-body a:hover {
+    color: #ff9dff;
+}
+
 .section-header {
     background-color: #fae9dedf;
     color: #1a1a1a;
