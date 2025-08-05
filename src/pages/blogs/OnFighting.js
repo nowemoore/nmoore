@@ -7,7 +7,7 @@ const OnFighting = () => {
             title="Fight Classy"
             date="August 2025"
             chips={["tool", "personal"]}
-            backgroundImage="library.jpg"
+            backgroundImage="suit.jpg"
         >
 
             <p>I hear people complain that telling kids to merely ‘say sorry’ when they wrong someone is not teaching them actual empathy, but I think the overarching issue is that they never learn to resolve conflict—only to handle it, at best. Now I’ve never studied conflict resolution itself, but I have read my fair share of papers about the human mind, which I’ve found helpful in connecting the dots in real-world scenarios. My today’s contribution is a few tips on resolving conflict that help me resolve ~90% of my problems, most of which work across settings—from work and friendships, to dating and family. Hope some of it helps.</p>

@@ -24,6 +24,7 @@ import humanoidllm from "../assets/images/humanoidllm.jpg"
 import neural from "../assets/images/neural.jpg"
 import phonotool from "../assets/images/phonotool.png"
 import library from "../assets/images/library.jpg"
+import suit from "../assets/images/suit.jpg"
 
 const Projects = () => {
     const [selectedChips, setSelectedChips] = useState([]);
@@ -164,7 +165,7 @@ const Projects = () => {
             id: 12,
             title: "Fight Classy",
             description: "How I applied my degree in the Dark Arts to become a more likeable person to argue with.",
-            thumbnail: library,
+            thumbnail: suit,
             readMoreLink: "/onfighting",
             chips: ["tool", "personal"],
             date: "August 2025"
