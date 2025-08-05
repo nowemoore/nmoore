@@ -209,10 +209,8 @@ const Projects = () => {
         const columns = Array.from({ length: columnCount }, () => []);
         
         if (columnCount === 1) {
-            // For mobile, just use the sorted order directly
             columns[0] = [...projects].sort((a, b) => new Date(b.date) - new Date(a.date));
         } else {
-            // For desktop/tablet, distribute evenly while maintaining chronological order
             projects.forEach((project, index) => {
                 const columnIndex = index % columnCount;
                 columns[columnIndex].push(project);
