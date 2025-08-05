@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import CrushesPage from './pages/blogs/CrushesPage';
 import TheFrenchBread from './pages/blogs/TheFrenchBread';
 import FGLIGuide from './pages/blogs/FGLIGuide';
+import OnFighting from './pages/blogs/OnFighting';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                         <Route path="/contact" element={<ContactMe />} />
                          <Route path="/crushes" element={<CrushesPage />} />
                          <Route path='/fgliguide' element={<FGLIGuide />} />
+                         <Route path='/onfighting' element={<OnFighting />} />
                          <Route path="/thefrenchbread" element={<TheFrenchBread />} />
                     </Routes>
                 </div>

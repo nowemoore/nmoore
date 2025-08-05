@@ -159,6 +159,15 @@ const Projects = () => {
             readMoreLink: "/fgliguide",
             chips: ["tool", "personal"],
             date: "July 2025"
+        },
+        {
+            id: 12,
+            title: "Fight Classy",
+            description: "How I applied my degree in the Dark Arts to become a more likeable person to argue with.",
+            thumbnail: library,
+            readMoreLink: "/onfighting",
+            chips: ["tool", "personal"],
+            date: "August 2025"
         }
     ];
 
