@@ -25,6 +25,7 @@ import neural from "../assets/images/neural.jpg"
 import phonotool from "../assets/images/phonotool.png"
 import library from "../assets/images/library.jpg"
 import suit from "../assets/images/suit.jpg"
+import fermi from "../assets/images/fermi.png"
 
 const Projects = () => {
     const [selectedChips, setSelectedChips] = useState([]);
@@ -168,6 +169,15 @@ const Projects = () => {
             thumbnail: suit,
             readMoreLink: "/onfighting",
             chips: ["tool", "personal"],
+            date: "August 2025"
+        },
+        {
+            id: 13,
+            title: "A Continuing List of Grounding Fermi Problems (and how to solve them)",
+            description: "A showcase of some of my own estimation problems and possible solutions. I also give general intuitions for my decision tree.",
+            thumbnail: fermi,
+            readMoreLink: "/fermi",
+            chips: ["tool"],
             date: "August 2025"
         }
     ];

@@ -12,6 +12,7 @@ import CrushesPage from './pages/blogs/CrushesPage';
 import TheFrenchBread from './pages/blogs/TheFrenchBread';
 import FGLIGuide from './pages/blogs/FGLIGuide';
 import OnFighting from './pages/blogs/OnFighting';
+import Fermi from './pages/blogs/Fermi';
 import './App.css';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                          <Route path='/fgliguide' element={<FGLIGuide />} />
                          <Route path='/onfighting' element={<OnFighting />} />
                          <Route path="/thefrenchbread" element={<TheFrenchBread />} />
+                         <Route path="/fermi" element={<Fermi/>} />
                     </Routes>
                 </div>
                 <Footer />
