@@ -48,7 +48,7 @@ const Fermi = () => {
     <p><b>General Thoughts:</b> Beside the general advice of "break down each question into more manageable subproblems" and "use information you know to estimate a range of information you don't know", I find it quite helpful to work with endpoints of estimated ranges and balance out the number of optimistic and pessimistic values per chain of thought (rather than work with the averages of ranges). Suppose you're working out the value of x from the estimated ranges for subproblems y and z: select one endpoint for y according to relevant externalities, but make a conscious choice to go with the other endpoint when unsure on z. Helps offset compounding errors and prevents systemic bias.</p>
     
     <div className='spacer'></div>
-    <p>Send my way any Fermi problems you believe could fit this collection and would like to see worked out!</p>
+    <p>Got any Fermi problems you believe could fit this collection? Send them my way and I may work them out!</p>
     </TextPageBase>            
     );
 };

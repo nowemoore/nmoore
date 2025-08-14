@@ -26,6 +26,7 @@ import phonotool from "../assets/images/phonotool.png"
 import library from "../assets/images/library.jpg"
 import suit from "../assets/images/suit.jpg"
 import fermi from "../assets/images/fermi.png"
+import system from "../assets/images/system.jpg"
 
 const Projects = () => {
     const [selectedChips, setSelectedChips] = useState([]);
@@ -179,6 +180,15 @@ const Projects = () => {
             readMoreLink: "/fermi",
             chips: ["tool", "academic"],
             date: "14 August 2025"
+        },
+        {
+            id: 14,
+            title: "The System",
+            description: "Me on why underspecified and conflicting objectives are an interesting problem in AGI.",
+            thumbnail: system,
+            readMoreLink: "/thesystem",
+            chips: ["personal", "academic"],
+            date: "13 August 2025"
         }
     ];
 
