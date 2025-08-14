@@ -177,7 +177,7 @@ const Projects = () => {
             description: "A showcase of some of my own estimation problems and possible solutions. I also give general intuitions for my decision tree.",
             thumbnail: fermi,
             readMoreLink: "/fermi",
-            chips: ["tool"],
+            chips: ["tool", "academic"],
             date: "August 2025"
         }
     ];

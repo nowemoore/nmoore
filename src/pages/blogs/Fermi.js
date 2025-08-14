@@ -6,7 +6,7 @@ const Fermi = () => {
         <TextPageBase
             title="A Continuing List of Grounding Fermi Problems (and how to solve them)"
             date="August 2025"
-            chips={["tool"]}
+            chips={["tool", "academic"]}
             backgroundImage="fermi.png"
         >
 
