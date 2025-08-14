@@ -160,7 +160,7 @@ const Projects = () => {
             thumbnail: library,
             readMoreLink: "/fgliguide",
             chips: ["tool", "personal"],
-            date: "July 2025"
+            date: "25 July 2025"
         },
         {
             id: 12,
@@ -169,7 +169,7 @@ const Projects = () => {
             thumbnail: suit,
             readMoreLink: "/onfighting",
             chips: ["tool", "personal"],
-            date: "August 2025"
+            date: "6 August 2025"
         },
         {
             id: 13,
@@ -178,7 +178,7 @@ const Projects = () => {
             thumbnail: fermi,
             readMoreLink: "/fermi",
             chips: ["tool", "academic"],
-            date: "August 2025"
+            date: "14 August 2025"
         }
     ];
 
