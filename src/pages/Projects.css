@@ -271,7 +271,7 @@
 .project-button {
     background-color: rgba(250, 233, 222, 0.7);
     color: #000;
-    padding: clamp(0.5rem, 0.8vw, 0.75rem) clamp(0.75rem, 1.2vw, 1rem);
+    padding: clamp(0.3rem, 0.8vw, 0.75rem) clamp(0.5rem, 1.2vw, 1rem);
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: 600;
