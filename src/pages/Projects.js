@@ -27,6 +27,7 @@ import library from "../assets/images/library.jpg"
 import suit from "../assets/images/suit.jpg"
 import fermi from "../assets/images/fermi.png"
 import system from "../assets/images/system.jpg"
+import proposal from "../assets/docs/proposal_phd_nmoore.pdf"
 
 const Projects = () => {
     const [selectedChips, setSelectedChips] = useState([]);
@@ -44,7 +45,7 @@ const Projects = () => {
             abstractLink: seabs,
             posterLink: null,
             chips: ["academic"],
-            date: "December 2022"
+            date: "22 December 2022"
         },
         {
             id: 2,
@@ -56,7 +57,7 @@ const Projects = () => {
             abstractLink: negabs,
             posterLink: negpost,
             chips: ["academic"],
-            date: "September 2023"
+            date: "22 May 2023"
         },
         {
             id: 3,
@@ -68,7 +69,7 @@ const Projects = () => {
             abstractLink: null,
             posterLink: null,
             chips: ["academic"],
-            date: "May 2024"
+            date: "23 May 2024"
         },
         {
             id: 4,
@@ -80,7 +81,7 @@ const Projects = () => {
             abstractLink: null,
             posterLink: null,
             chips: ["academic"],
-            date: "June 2024"
+            date: "15 June 2024"
         },
         {
             id: 5,
@@ -93,7 +94,7 @@ const Projects = () => {
             abstractLink: null,
             posterLink: null,
             chips: ["academic", "code"],
-            date: "May 2025"
+            date: "1 May 2025"
         },
         {
             id: 6,
@@ -105,7 +106,7 @@ const Projects = () => {
             abstractLink: null,
             posterLink: null,
             chips: ["academic", "code"],
-            date: "May 2025"
+            date: "13 May 2025"
         },
         {
             id: 7,
@@ -117,7 +118,7 @@ const Projects = () => {
             abstractLink: null,
             posterLink: null,
             chips: ["personal", "art"],
-            date: "March 2024",
+            date: "27 March 2024",
             translationLink: crushespdfsk
         },
         {
@@ -130,7 +131,7 @@ const Projects = () => {
             abstractLink: null,
             posterLink: null,
             chips: ["personal", "academic"],
-            date: "January 2024"
+            date: "15 January 2024"
         },
         {
             id: 9,
@@ -142,7 +143,7 @@ const Projects = () => {
             abstractLink: null,
             posterLink: null,
             chips: ["personal", "art"],
-            date: "May 2022"
+            date: "30 May 2022"
         },
         {
             id: 10,
@@ -152,7 +153,7 @@ const Projects = () => {
             viewPageLink: "https://nowemoore.github.io/phonology_app/",
             readMoreLink: "https://nowemoore.github.io/phonology_app/help.html",
             chips: ["tool", "academic"],
-            date: "June 2025"
+            date: "27 June 2025"
         },
         {
             id: 11,
@@ -189,6 +190,15 @@ const Projects = () => {
             readMoreLink: "/thesystem",
             chips: ["personal", "academic"],
             date: "13 August 2025"
+        }, 
+         {
+            id: 15,
+            title: "The Safety of Epistemic Human-AI Partnerships under Adversarial Conditions",
+            description: "My personal research agenda: what I consider important questions to help prevent gradual disempowerment.",
+            thumbnail: system,
+            paperLink: proposal,
+            chips: ["academic"],
+            date: "8 October 2025"
         }
     ];
 
