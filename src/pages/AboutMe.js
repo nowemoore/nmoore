@@ -1,7 +1,6 @@
 import React from 'react';
 import './AboutMe.css';
 import BackgroundSection from '../components/BackgroundSection';
-import cvPDF from '../assets/docs/cv.pdf'; // Replace with your CV PDF path
 
 const AboutMe = () => {
     return (
@@ -26,9 +25,9 @@ const AboutMe = () => {
                 My blended background in <b>language</b>, <b>cognition</b>, and <b>computer sciences</b> inspires my inquiry in how the mind&mdash;human or artificial&mdash;uses language as a medium to facilitate thought, intentions, decision-making, and human-computer interaction.
                 I believe more answers to questions in this domain are necessary for a more sustainable progress.
                 </p>
-                <a href={cvPDF} className="cv-button" target="_blank" rel="noopener noreferrer">
-                    View CV
-                </a>
+                <a href="https://github.com/nowemoore/resume/blob/main/cv_nmoore_git.pdf" className="cv-button" target="_blank" rel="noopener noreferrer">
+    View CV
+</a>
             </div>
         </BackgroundSection>
     );
