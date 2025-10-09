@@ -14,10 +14,11 @@ import sycproject from '../assets/docs/syc.pdf';
 import crushespdfsk from "../assets/docs/crushes_sk.pdf";
 import everybodycalmdown from "../assets/docs/everybody_calm_down.pdf";
 import thefrenchbreadpic from "../assets/images/thefrenchbread.jpg";
+import nn from "../assets/images/nn.jpg"
 import friendlybot from "../assets/images/friendlybot.jpg"
 import poutine from "../assets/images/poutine.jpg"
 import mayan from "../assets/images/mayan.jpg"
-import tree from "../assets/images/tree.jpg"
+import slavic from "../assets/images/slavic.png"
 import oldtree from "../assets/images/treeold.jpg"
 import gradientchoice from "../assets/images/gradientchoice.jpg"
 import humanoidllm from "../assets/images/humanoidllm.jpg"
@@ -51,7 +52,7 @@ const Projects = () => {
             id: 2,
             title: "More Misery Is Coming: Negative Concord in West Slavic",
             description: "A closer look at the scope of AGREE versus the scope of Negative Concord in West Slavic languages.",
-            thumbnail: tree,
+            thumbnail: slavic,
             readMoreLink: null,
             paperLink: negpaper,
             abstractLink: negabs,
@@ -195,7 +196,7 @@ const Projects = () => {
             id: 15,
             title: "The Safety of Epistemic Human-AI Partnerships under Adversarial Conditions",
             description: "My personal research agenda: what I consider important questions to help prevent gradual disempowerment.",
-            thumbnail: system,
+            thumbnail: nn,
             paperLink: proposal,
             chips: ["academic"],
             date: "8 October 2025"
