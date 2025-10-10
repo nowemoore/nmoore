@@ -15,11 +15,11 @@ import crushespdfsk from "../assets/docs/crushes_sk.pdf";
 import everybodycalmdown from "../assets/docs/everybody_calm_down.pdf";
 import thefrenchbreadpic from "../assets/images/thefrenchbread.jpg";
 import nn from "../assets/images/nn.jpg"
-import friendlybot from "../assets/images/friendlybot.jpg"
+import debate from "../assets/images/debate.png";
 import poutine from "../assets/images/poutine.jpg"
 import mayan from "../assets/images/mayan.jpg"
 import slavic from "../assets/images/slavic.png"
-import oldtree from "../assets/images/treeold.jpg"
+import slavictree from "../assets/images/slavictree.png"
 import gradientchoice from "../assets/images/gradientchoice.jpg"
 import humanoidllm from "../assets/images/humanoidllm.jpg"
 import neural from "../assets/images/neural.jpg"
@@ -40,7 +40,7 @@ const Projects = () => {
             id: 1,
             title: "Czech 'SE': Multiple Functions Are Better than One",
             description: "Documentation of my search for implicit and/or explicit linguistic agents in various constructions using the 'SE' particle.",
-            thumbnail: oldtree,
+            thumbnail: slavictree,
             readMoreLink: null,
             paperLink: sepaper,
             abstractLink: seabs,
@@ -126,7 +126,7 @@ const Projects = () => {
             id: 8,
             title: "Everybody Calm Down",
             description: "Unsolicited commentary on the perceived tension between generative linguistics and computer science.",
-            thumbnail: friendlybot,
+            thumbnail: debate,
             readMoreLink: null,
             paperLink: everybodycalmdown,
             abstractLink: null,
