@@ -13,7 +13,8 @@ import TheFrenchBread from './pages/blogs/TheFrenchBread';
 import FGLIGuide from './pages/blogs/FGLIGuide';
 import OnFighting from './pages/blogs/OnFighting';
 import Fermi from './pages/blogs/Fermi';
-import TheSystem from './pages/blogs/TheSystem'
+import TheSystem from './pages/blogs/TheSystem';
+import Bases from './pages/blogs/ChangingBases';
 import './App.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                          <Route path="/thefrenchbread" element={<TheFrenchBread />} />
                          <Route path="/fermi" element={<Fermi/>} />
                          <Route path="/thesystem" element={<TheSystem/>} />
+                         <Route path="/changingbases" element={<Bases/>} />
                     </Routes>
                 </div>
                 <Footer />

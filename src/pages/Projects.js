@@ -29,6 +29,7 @@ import suit from "../assets/images/suit.jpg"
 import fermi from "../assets/images/fermi.png"
 import system from "../assets/images/system.jpg"
 import proposal from "../assets/docs/proposal_phd_nmoore.pdf"
+import bases from "../assets/images/bases.jpg"
 
 const Projects = () => {
     const [selectedChips, setSelectedChips] = useState([]);
@@ -200,6 +201,15 @@ const Projects = () => {
             paperLink: proposal,
             chips: ["academic"],
             date: "8 October 2025"
+        },
+        {
+            id: 16,
+            title: "On Changing Bases",
+            description: "And why I think it's more important than most people realise.",
+            thumbnail: bases,
+            readMoreLink: "/changingbases",
+            chips: ["personal"],
+            date: "6 November 2025"
         }
     ];
 
