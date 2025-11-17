@@ -5,7 +5,7 @@ const ChangingBasesPage = () => {
     return (
         <TextPageBase 
             title="Changing Bases"
-            date="November 2024"
+            date="November 2025"
             chips={["personal"]}
             backgroundImage="bases.jpg"
         >
