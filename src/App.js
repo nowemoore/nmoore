@@ -10,7 +10,7 @@ const useScrollReveal = () => {
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: '0px 0px -200px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -69,25 +69,25 @@ const AboutSection = ({ onScrollToSection }) => {
     >
       <div className="section-overlay"></div>
 
-      <div className="about-content scroll-reveal" style={{ position: 'relative', zIndex: 1 }}>
-        <div className="section-header">
+      <div className="about-content" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="section-header scroll-reveal">
           <h2 className="section-title">About Me</h2>
         </div>
         
         <div className="about-main">
-          <p className="about-paragraph-centered">
+          <p className="about-paragraph-centered scroll-reveal">
             Curious about the mind, human and artificial. I'm specifically interested in decision-making systems: what environments enable and break decision-making processes as we know them, and to what extent AI inherits human heuristics of "good choice". In addition to safe AI, I contribute to a range of activities that help build smarter and more productive communities: from creating pop-science content and courses to organising larger events across the academic community and beyond. Sign me up for good transhumanist sci-fi and urban fantasy anytime.
           </p>
 
-          <div className="divider">
+          <div className="divider scroll-reveal">
             <i className="fas fa-diamond"></i>
             <i className="fas fa-circle"></i> 
             <i className="fas fa-diamond"></i>
           </div>
           
-          <h3 className="about-subtitle">Here are 3 Things I Care about:</h3>
+          <h3 className="about-subtitle scroll-reveal">Here are 3 Things I Care about:</h3>
           
-          <div className="about-interests">
+          <div className="about-interests scroll-reveal">
             <button onClick={() => onScrollToSection('research')} className="interest-item">
               <div className="interest-icon">
                 <i className="fas fa-puzzle-piece"></i>
@@ -159,13 +159,13 @@ const ResumeSection = ({ onScrollToSection }) => {
     >
       <div className="section-overlay"></div>
 
-      <div className="resume-content scroll-reveal" style={{ position: 'relative', zIndex: 1 }}>
-        <div className="section-header">
+      <div className="resume-content" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="section-header scroll-reveal">
           <h2 className="section-title">Resume Highlights</h2>
         </div>
         
         <div className="resume-main">
-          <div className="resume-item">
+          <div className="resume-item scroll-reveal">
             {/* Education */}
             <div className="resume-icon-section">
               <i className="fas fa-graduation-cap"></i>
@@ -214,7 +214,7 @@ const ResumeSection = ({ onScrollToSection }) => {
          
   
 
-          <div className="divider">
+          <div className="divider scroll-reveal">
             <i className="fas fa-diamond"></i>
             <i className="fas fa-circle"></i> 
             <i className="fas fa-diamond"></i>
@@ -226,7 +226,7 @@ const ResumeSection = ({ onScrollToSection }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fas fa-scroll"></i>
+            <i className="fas fa-scroll-reveal"></i>
             <span>View Full CV</span>
           </a>
         </div>
@@ -328,14 +328,14 @@ const ResearchSection = ({ onReadClick }) => {
       }}
     >
       <div className="section-overlay"></div>
-      <div className="section-content scroll-reveal">
-        <div className="section-header">
+      <div className="section-content">
+        <div className="section-header scroll-reveal">
           <h2 className="section-title">Research</h2>
           <p className="section-description">
             Guided by the infamous: <em>Believe nothing you hear and a half of what you see.</em> ~E. A. Poe
           </p>
         </div>
-        <div className="projects-grid">
+        <div className="projects-grid scroll-reveal">
           {displayedProjects.map((project, idx) => (
             <ProjectCard key={idx} project={project} onReadClick={onReadClick} />
           ))}
@@ -345,7 +345,7 @@ const ResearchSection = ({ onReadClick }) => {
         {hasMore && (
           <>
             {!showAll && (
-              <div className="show-more-container">
+              <div className="show-more-container scroll-reveal">
                 <div className="blur-preview">
                   <div className="preview-cards">
                     {projects.slice(3, 6).map((project, idx) => (
@@ -390,6 +390,12 @@ const EventsSection = ({ onReadClick }) => {
   // edit events here
   const projects = [
     {
+      title: 'Introducing: LessFriction',
+      description: 'A framework for (not only) changemakers with executive dysfunction to stay on top of their game and get things done.',
+      image: '/images/plan.jpg',
+      page: 'https://nowemoore.github.io/lessfriction/',
+    },
+    {
       title: 'Python from the Very Beginning',
       description: '8-week intro course to Python programming for a women\'s ed NGO in CEE. Covers major barriers to entry such as environment setup and applied examples.',
       image: '/images/code.jpg',
@@ -426,14 +432,14 @@ const EventsSection = ({ onReadClick }) => {
         backgroundColor: 'var(--primary-bg)'
       }}
     >
-      <div className="section-content scroll-reveal">
-        <div className="section-header">
+      <div className="section-content">
+        <div className="section-header scroll-reveal">
           <h2 className="section-title">Community Work</h2>
           <p className="section-description">
             Building smarter and more productive communities through sharing knowledge and fostering collaboration.
           </p>
         </div>
-        <div className="projects-grid">
+        <div className="projects-grid scroll-reveal">
           {displayedProjects.map((project, idx) => (
             <ProjectCard key={idx} project={project} onReadClick={onReadClick} />
           ))}
@@ -443,7 +449,7 @@ const EventsSection = ({ onReadClick }) => {
         {hasMore && (
           <>
             {!showAll && (
-              <div className="show-more-container">
+              <div className="show-more-container scroll-reveal">
                 <div className="blur-preview">
                   <div className="preview-cards">
                     {projects.slice(3, 6).map((project, idx) => (
@@ -531,14 +537,14 @@ const CommentsSection = ({ onReadClick }) => {
       }}
     >
       <div className="section-overlay"></div>
-      <div className="section-content scroll-reveal">
-        <div className="section-header">
+      <div className="section-content">
+        <div className="section-header scroll-reveal">
           <h2 className="section-title">Unsolicited Commentary</h2>
           <p className="section-description">
             In honour of my school English teacher who says that authors don't write when they get ideas but when something pisses them off.
           </p>
         </div>
-        <div className="projects-grid">
+        <div className="projects-grid scroll-reveal">
           {displayedProjects.map((project, idx) => (
             <ProjectCard key={idx} project={project} onReadClick={onReadClick} />
           ))}
@@ -547,7 +553,7 @@ const CommentsSection = ({ onReadClick }) => {
         {hasMore && (
           <>
             {!showAll && (
-              <div className="show-more-container">
+              <div className="show-more-container scroll-reveal">
                 <div className="blur-preview">
                   <div className="preview-cards">
                     {projects.slice(3, 6).map((project, idx) => (
@@ -624,14 +630,14 @@ const ArtsSection = ({ onReadClick }) => {
       }}
     >
       <div className="section-overlay"></div>
-      <div className="section-content scroll-reveal">
+      <div className="section-content">
         <div className="section-header">
-          <h2 className="section-title">Arts</h2>
+          <h2 className="section-title scroll-reveal">Arts</h2>
           <p className="section-description">
             Occassional Tim Burton vibes.
           </p>
         </div>
-        <div className="projects-grid">
+        <div className="projects-grid scroll-reveal">
           {displayedProjects.map((project, idx) => (
             <ProjectCard key={idx} project={project} onReadClick={onReadClick} />
           ))}
@@ -641,7 +647,7 @@ const ArtsSection = ({ onReadClick }) => {
         {hasMore && (
           <>
             {!showAll && (
-              <div className="show-more-container">
+              <div className="show-more-container scroll-reveal">
                 <div className="blur-preview">
                   <div className="preview-cards">
                     {projects.slice(3, 6).map((project, idx) => (
@@ -706,8 +712,8 @@ const ContactSection = () => {
 
     <div className="section-overlay"></div>
 
-      <div className="contact-content scroll-reveal">
-        <div className="section-header">
+      <div className="contact-content">
+        <div className="section-header scroll-reveal">
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-description">
             Always open to discussing research collaborations, community-building opportunities,
@@ -723,7 +729,7 @@ const ContactSection = () => {
               target={link.url.startsWith('http') ? '_blank' : undefined}
               rel={link.url.startsWith('http') ? 'noopener noreferrer' : undefined}
             >
-              <div className="contact-button-icon">
+              <div className="contact-button-icon scroll-reveal">
                 <i className={link.icon}></i>
               </div>
             </a>
