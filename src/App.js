@@ -5,6 +5,32 @@ import { blogPosts } from './BlogPosts';
 import signature from './signature.png';
 import signaturelm from './signature-lm.png';
 
+// ==================== SCROLL REVEAL HOOK ====================
+const useScrollReveal = () => {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          // Optional: stop observing after reveal
+          // observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with scroll-reveal class
+    const elements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+    elements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+};
+
 // ==================== HERO SECTION COMPONENT ====================
 const HeroSection = ({ onScrollToSection }) => {
   return (
@@ -43,14 +69,14 @@ const AboutSection = ({ onScrollToSection }) => {
     >
       <div className="section-overlay"></div>
 
-      <div className="about-content" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="about-content scroll-reveal" style={{ position: 'relative', zIndex: 1 }}>
         <div className="section-header">
           <h2 className="section-title">About Me</h2>
         </div>
         
         <div className="about-main">
           <p className="about-paragraph-centered">
-            Curious about the mind, human and artificial. Sign me up for good transhumanist sci-fi and urban fantasy anytime.
+            Curious about the mind, human and artificial. I'm specifically interested in decision-making systems: what environments enable and break decision-making processes as we know them, and to what extent AI inherits human heuristics of "good choice". In addition to safe AI, I contribute to a range of activities that help build smarter and more productive communities: from creating pop-science content and courses to organising larger events across the academic community and beyond. Sign me up for good transhumanist sci-fi and urban fantasy anytime.
           </p>
 
           <div className="divider">
@@ -75,7 +101,7 @@ const AboutSection = ({ onScrollToSection }) => {
                 <i className="fas fa-heart"></i>
               </div>
               <span className="interest-label">Events</span>
-              <p className="interest-description">Helping communities up curiosity and productiveness.</p>
+              <p className="interest-description">Helping communities up curiosity and productiveness in effective ways.</p>
             </button>
             
             <button onClick={() => onScrollToSection('comments')} className="interest-item">
@@ -133,7 +159,7 @@ const ResumeSection = ({ onScrollToSection }) => {
     >
       <div className="section-overlay"></div>
 
-      <div className="resume-content" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="resume-content scroll-reveal" style={{ position: 'relative', zIndex: 1 }}>
         <div className="section-header">
           <h2 className="section-title">Resume Highlights</h2>
         </div>
@@ -302,7 +328,7 @@ const ResearchSection = ({ onReadClick }) => {
       }}
     >
       <div className="section-overlay"></div>
-      <div className="section-content">
+      <div className="section-content scroll-reveal">
         <div className="section-header">
           <h2 className="section-title">Research</h2>
           <p className="section-description">
@@ -364,12 +390,28 @@ const EventsSection = ({ onReadClick }) => {
   // edit events here
   const projects = [
     {
-      title: 'AI Safety workshop series',
-      description: 'A 3-session workshop series introducing AI safety concepts to academics from diverse fields.',
-      image: '/images/ai-workshop.jpg',
+      title: 'Python from the Very Beginning',
+      description: '8-week intro course to Python programming for a women\'s ed NGO in CEE. Covers major barriers to entry such as environment setup and applied examples.',
+      image: '/images/code.jpg',
+      read: 'https://ajtyvit.sk/podujatia/zacni-s-pythonom/',
+      page: 'https://github.com/nowemoore/pythoness/tree/main',
+    },
+    {
+      title: 'AI Safety & Social Impacts of AI Ideathon',
+      description: 'Saturday ideathon bringing together academics from diverse fields to brainstorm safety questions in AI.',
+      date: 'April 2025',
+      image: '/images/ideathon.jpg',
       read: 'https://omnia.sas.upenn.edu/story/new-mind-AI-nikola-moore',
       poster: '/images/ai4g-poster.jpg',
     },
+    {
+      title: 'AI Safety workshop series',
+      description: '3-session workshop series introducing AI safety concepts to academics from diverse fields.',
+      date: 'February - March 2025',
+      image: '/images/ai-workshop.jpg',
+      read: 'https://omnia.sas.upenn.edu/story/new-mind-AI-nikola-moore',
+      poster: '/images/tnm.jpg',
+    }
   ];
 
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
@@ -384,7 +426,7 @@ const EventsSection = ({ onReadClick }) => {
         backgroundColor: 'var(--primary-bg)'
       }}
     >
-      <div className="section-content">
+      <div className="section-content scroll-reveal">
         <div className="section-header">
           <h2 className="section-title">Community Work</h2>
           <p className="section-description">
@@ -465,7 +507,15 @@ const CommentsSection = ({ onReadClick }) => {
       image: '/images/suit.jpg',
       date: 'August 2025',
       read: 'fight-classy'
-    }
+    },
+    {
+      title: 'Spectators',
+      description: 'A modest commentary on braindrain from CEE and the ethics of allowing citizens abroad to cast their vote in elections.',
+      image: '/images/n.jpg',
+      date: 'September 2023',
+      read: 'https://dennikn.sk/blog/3589646/divaci/'
+    },
+
   ];
 
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
@@ -481,7 +531,7 @@ const CommentsSection = ({ onReadClick }) => {
       }}
     >
       <div className="section-overlay"></div>
-      <div className="section-content">
+      <div className="section-content scroll-reveal">
         <div className="section-header">
           <h2 className="section-title">Unsolicited Commentary</h2>
           <p className="section-description">
@@ -574,7 +624,7 @@ const ArtsSection = ({ onReadClick }) => {
       }}
     >
       <div className="section-overlay"></div>
-      <div className="section-content">
+      <div className="section-content scroll-reveal">
         <div className="section-header">
           <h2 className="section-title">Arts</h2>
           <p className="section-description">
@@ -656,7 +706,7 @@ const ContactSection = () => {
 
     <div className="section-overlay"></div>
 
-      <div className="contact-content">
+      <div className="contact-content scroll-reveal">
         <div className="section-header">
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-description">
@@ -734,6 +784,8 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [currentPost, setCurrentPost] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useScrollReveal();
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
