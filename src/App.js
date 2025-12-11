@@ -633,8 +633,8 @@ const ArtsSection = ({ onReadClick }) => {
     >
       <div className="section-overlay"></div>
       <div className="section-content">
-        <div className="section-header">
-          <h2 className="section-title scroll-reveal">Arts</h2>
+        <div className="section-header scroll-reveal">
+          <h2 className="section-title">Arts</h2>
           <p className="section-description">
             Occassional Tim Burton vibes.
           </p>
