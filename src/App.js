@@ -391,12 +391,14 @@ const EventsSection = ({ onReadClick }) => {
   const projects = [
     {
       title: 'Introducing: LessFriction',
+      date: 'December 2025',
       description: 'A framework for (not only) changemakers with executive dysfunction to stay on top of their game and get things done.',
       image: '/images/plan.jpg',
       page: 'https://nowemoore.github.io/lessfriction/',
     },
     {
       title: 'Python from the Very Beginning',
+      date: 'August - December 2025',
       description: '8-week intro course to Python programming for a women\'s ed NGO in CEE. Covers major barriers to entry such as environment setup and applied examples.',
       image: '/images/code.jpg',
       read: 'https://ajtyvit.sk/podujatia/zacni-s-pythonom/',
