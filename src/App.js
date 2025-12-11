@@ -133,9 +133,9 @@ const ResumeSection = ({ onScrollToSection }) => {
   ];
 
   const skills = [
-    'Python, LaTeX, Git, SQL, data visualization',
-    'XP design, curriculum development, teaching',
-    'MS Office, Canva, CAD'
+    'Make things run: Python, Git, SQL',
+    'Make things shine: data viz, LaTeX, Canva, CAD',
+    'Make things stick: XP design, curriculum dev'
   ];
 
   const achievements = [
