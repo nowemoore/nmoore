@@ -543,7 +543,7 @@ const CommentsSection = ({ onReadClick }) => {
         <div className="section-header scroll-reveal">
           <h2 className="section-title">Unsolicited Commentary</h2>
           <p className="section-description">
-            In honour of my school English teacher who says that authors don't write when they get ideas but when something ticks them off..
+            In honour of my school English teacher who says that authors don't write when they get ideas but when something ticks them off.
           </p>
         </div>
         <div className="projects-grid scroll-reveal">
