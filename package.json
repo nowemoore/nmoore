@@ -16,13 +16,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
+     "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+     "build": "react-scripts build",
+     "build:github": "set PUBLIC_URL=/nmoore&&react-scripts build",
+     "test": "react-scripts test",
+     "eject": "react-scripts eject",
+     "predeploy": "npm run build:github",
+     "deploy": "gh-pages -d build"
+   },
   "eslintConfig": {
     "extends": [
       "react-app",
