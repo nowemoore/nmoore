@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+:root {
+  --teal: #4DB6AC;
+  --dark-teal: #005B53;
+  --cream: #F3EADA;
+  --purple-light: #f677d4;
+
+  --primary-bg: #1a1918;
+  --secondary-bg: #252423;
+  --tertiary-bg: #2f2e2c;
+  --surface-bg: #3a3937;
+  --accent-primary: #51a89f;
+  --accent-secondary: #d440ad;
+  --accent-tertiary: #F3EADA;
+  --component: #8d7e70d5;
+  --text-primary: #e8dfd5;
+  --text-highlight: #51a89f;
+  --text-primary-opaque: rgba(232, 223, 213, 0.4);
+  --text-secondary: #c9bfb3;
+  --text-muted: #a39689;
+  --card-bg: rgba(47, 46, 44, 0.6);
+  --card-border: rgba(77, 182, 172, 0.2);
+  --transition: all 0.3s ease;
+  --primary-color: var(--text-highlight);
+  --secondary-color: var(--accent-secondary);
+  --text-dark-lm: #1a2332;
+  --text-dark-dm: #F3EADA;
+}
+
+[data-theme="light"] {
+  --primary-bg: #F3EADA;
+  --secondary-bg: #e8dcc8;
+  --tertiary-bg: #ddd1b8;
+  --surface-bg: #f5efe3;
+  --accent-primary: #95ddd7;
+  --accent-secondary: #e991ec;
+  --accent-tertiary: #ce0cbe;
+  --component: #344b48cb;
+  --text-primary: #2d2925;
+  --text-highlight:#005B53;
+  --text-primary-opaque: rgba(45, 41, 37, 0.4);
+  --text-secondary: #4a453f;
+  --text-muted: #6b655d;
+  --text-muted-opaque: rgba(107, 101, 93, 0.6);
+  --card-bg: rgba(255, 251, 245, 0.85);
+  --card-border: rgba(0, 91, 83, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(1rem, 4vw, 3rem);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-secondary);
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+
+a {
+  font-family: 'Outfit', sans-serif;
+  color: var(--accent-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--purple-light);
+}
+
+button {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-primary);
+}
