@@ -229,19 +229,16 @@ export default function Takes() {
                 ))}
               </div>
 
-              <div className={styles.showMoreContainer}>
+             <div className={styles.showMoreContainer}>
                 <button
                   className={styles.showMoreLessBtn}
                   onClick={() => setShowAll(!showAll)}
                   type="button"
                 >
-                  <FontAwesomeIcon 
-                    icon={faChevronDown} 
-                    className={showAll ? styles.chevronUp : ""} 
-                  />
+                  <i className={`fas ${showAll ? "fa-circle-chevron-up" : "fa-circle-chevron-down"}`} />
                   <span>{showAll ? "show less" : "show more"}</span>
                 </button>
-              </div>
+            </div>
             </>
           )}
         </div>

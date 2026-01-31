@@ -461,6 +461,19 @@
   color: var(--primary-bg);
 }
 
+@media (max-width: 48rem) {
+  .resumeGrid {
+    width: 100%;
+  }
+
+  .resumeBlock {
+    width: 100%;
+    align-self: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 /* lists */
 .listsColumns {
   display: grid;
@@ -614,6 +627,21 @@
 
 [data-theme="light"] .contactButtonIcon i {
   color: var(--text-dark-lm);
+}
+
+@media (max-width: 48rem) {
+  .contactButtonIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .contactButtonIcon i {
+    font-size: 3rem;
+  }
+
+  .contactMethods {
+    gap: 1.5rem;
+  }
 }
 
 /* Responsive */
