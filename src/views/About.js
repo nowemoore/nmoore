@@ -9,7 +9,7 @@ export default function About() {
   ];
 
   const experience = [
-    "2+ years in graduate research, 6 intl. conferences (counting)",
+    "2+ years in graduate research, 10+ original projects",
     "Organiseed an AI safety workshop series for 120+ participants",
     "Helped orgs across 3 continents fetch and upskill STEM talent"
   ];
