@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "../pages.module.css";
 import ProjectCard from "../components/ProjectCard";
 import { faPython } from '@fortawesome/free-brands-svg-icons'
-import { faLightbulb, faUsers, faChalkboardTeacher } from "@fortawesome/free-solid-svg-icons";
+import { faUsers, faChalkboardTeacher } from "@fortawesome/free-solid-svg-icons";
 
 export default function Events() {
   const navigate = useNavigate();

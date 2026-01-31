@@ -30,15 +30,6 @@ const SECTION_TO_PATH = {
   contact: "/contact",
 };
 
-const PATH_TO_SECTION = {
-  "/": "home",
-  "/about": "about",
-  "/research": "research",
-  "/events": "events",
-  "/takes": "takes",
-  "/contact": "contact",
-};
-
 const SECTION_IDS = ["home", "about", "research", "events", "takes", "contact"];
 
 function MainPage({ setActiveSection }) {

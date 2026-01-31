@@ -91,7 +91,7 @@ export default function Takes() {
       icon: faMugHot,
       bulletIcon: faBookmark,
       items: [
-        <><a href="https://www.youtube.com/watch?v=77wNujaN0x8" target="_blank" rel="noopener noreferred">Gummiberry Juice</a> (Masala Chai)</>,
+        <><a href="https://www.youtube.com/watch?v=77wNujaN0x8" target="_blank" rel="noopener noreferrer">Gummiberry Juice</a> (Masala Chai)</>,
         <>Fujian White</>,
         <>Nai Xiang (Milk Oolong)</>,
         <>Kukicha (Bocha)</>,
