@@ -153,7 +153,8 @@ export default function Takes() {
         <>Send a cold email</>,
         <>Write up an idea</>,
         <>Remake that restaurant food but custom your spices</>,
-        <>Outline a book</>
+        <>Outline a book</>,
+        <>Make a CV for a genX-er</>
       ]
     },
     {
