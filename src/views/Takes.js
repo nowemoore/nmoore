@@ -154,7 +154,7 @@ export default function Takes() {
         <>Write up an idea</>,
         <>Remake that restaurant food but custom your spices</>,
         <>Outline a book</>,
-        <>Make a CV for a genX-er</>
+        <>Make a CV for a millenial</>
       ]
     },
     {
